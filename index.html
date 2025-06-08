@@ -127,6 +127,10 @@
   color:#333;              /* dark text for body copy */
 }
 
+.about-section .lead {
+  color: #333 !important;
+}
+
 .about-section h1 {
   color:#000;              /* solid black heading */
   font-weight:700;
@@ -201,6 +205,20 @@
   .timeline-list::before { left: -11px; }
   .timeline-dot { left: -17px; }
 }
+
+/* Logo inside timeline cards */
+.timeline-logo {
+  width: auto;
+  max-height: 48px;
+  object-fit: contain;
+  margin-left: 16px;
+}
+
+/* Make card body flex-column on mobile so logo drops below text nicely */
+@media (max-width:767.98px){
+  .timeline-card{ flex-direction:column!important; }
+  .timeline-logo{ margin:16px 0 0 0; }
+}
 </style>
 
 
@@ -247,31 +265,70 @@
   </div>
 </section>
     
-<!-- ──────── Education & Experience ──────── -->
+<!-- ───────────── Education & Experience ───────────── -->
 <section id="timeline" class="timeline py-5">
   <div class="container">
     <div class="row">
-      
+
       <!-- === Education === -->
       <div class="col-md-6 mb-5 mb-md-0">
         <h2 class="section-title mb-4">Education</h2>
         <ul class="timeline-list">
+
+          <!-- ASU -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card shadow-sm">
-              <small class="text-muted">2023 – 2025</small>
-              <h5 class="mb-1">M.S. Computer Science</h5>
-              <p class="mb-0">Arizona State University · GPA 3.80</p>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2023 – 2025</small>
+                <h5 class="mb-1">M.S. Computer Science</h5>
+                <strong>Arizona State University</strong> · GPA 3.80<br>
+                <em>Courses:</em> Distributed Database Systems, Data Mining, AI, Data Visualization
+              </div>
+              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
             </div>
           </li>
+
+          <!-- DJSCE -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card shadow-sm">
-              <small class="text-muted">2015 – 2019</small>
-              <h5 class="mb-1">B.Tech. Information Technology</h5>
-              <p class="mb-0">Savitribai Phule Pune University</p>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2015 – 2019</small>
+                <h5 class="mb-1">B.E. Information Technology</h5>
+                <strong>Dwarkadas J. Sanghavi College of Engg.</strong> · GPA 3.52<br>
+                <em>Courses:</em> Big Data Analytics, Business Intelligence, Data Structures, Cloud Computing
+              </div>
+              <img class="timeline-logo" src="logo_djsce.png" alt="DJSCE">
             </div>
           </li>
+
+          <!-- HSC -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2013 – 2015</small>
+                <h5 class="mb-1">Higher Secondary Certificate – Science</h5>
+                <strong>University of Kolhapur</strong> · Grade 80.31%
+              </div>
+              <img class="timeline-logo" src="logo_kolhapur.jpeg" alt="Kolhapur Univ.">
+            </div>
+          </li>
+
+          <!-- SSC -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2007 – 2013</small>
+                <h5 class="mb-1">Secondary School Certificate</h5>
+                <strong>Tilak High School, Karad</strong> · Grade 94.18%
+              </div>
+              <img class="timeline-logo" src="logo_tilak.jpg" alt="Tilak HS">
+            </div>
+          </li>
+
         </ul>
       </div>
 
@@ -279,36 +336,76 @@
       <div class="col-md-6">
         <h2 class="section-title mb-4">Experience</h2>
         <ul class="timeline-list">
+
+          <!-- GSA -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card shadow-sm">
-              <small class="text-muted">Jan 2022 – Aug 2023</small>
-              <h5 class="mb-1">Consultant, EY</h5>
-              <p class="mb-0">Deployed ML workloads on AWS, built Spark-Kafka pipelines, reduced delivery time by 35%.</p>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Aug 2024 – May 2025</small>
+                <h5 class="mb-1">Graduate Service Assistant</h5>
+                <strong>Arizona State University, Tempe AZ</strong><br>
+                – Improved admin efficiency 15% via grading‐automation scripts & Tableau dashboards covering 300 + students.
+              </div>
+              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
             </div>
           </li>
+
+          <!-- EY Consultant -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card shadow-sm">
-              <small class="text-muted">Jun 2021 – Dec 2021</small>
-              <h5 class="mb-1">Associate Consultant, EY</h5>
-              <p class="mb-0">Migrated SAP to GCP microservices, created Git/Jenkins CI/CD workflows.</p>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jan 2022 – Aug 2023</small>
+                <h5 class="mb-1">Consultant, Data Science & Analytics</h5>
+                <strong>Ernst & Young (EY)</strong><br>
+                – Boosted throughput 20% with Spark-Kafka ETL pipelines.<br>
+                – Cut deployment cycles 35% by containerizing ML on AWS + Kubernetes.<br>
+                – Dropped false-positives 25% via XGBoost/Random Forest fraud models.<br>
+                – Managed SAP DI ETL for secure operations.
+              </div>
+              <img class="timeline-logo" src="logo_ey.png" alt="EY">
             </div>
           </li>
+
+          <!-- EY Associate Consultant -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card shadow-sm">
-              <small class="text-muted">Jun 2019 – May 2021</small>
-              <h5 class="mb-1">Senior Analyst, EY</h5>
-              <p class="mb-0">Automated data pipelines using Python & SQL, reducing manual time by 50%.</p>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jun 2021 – Dec 2021</small>
+                <h5 class="mb-1">Associate Consultant, DS & Analytics</h5>
+                <strong>Ernst & Young (EY)</strong><br>
+                – Migrated SAP ERP to GCP micro-services (gRPC) — 30% faster.<br>
+                – Implemented Git/Jenkins CI/CD (-30 % deploy effort).<br>
+                – Automated redesign of 50 k SAP roles (-60 % manual work).
+              </div>
+              <img class="timeline-logo" src="logo_ey.png" alt="EY">
             </div>
           </li>
+
+          <!-- EY Senior Analyst -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jun 2019 – May 2021</small>
+                <h5 class="mb-1">Senior Analyst, DS & Analytics</h5>
+                <strong>Ernst & Young (EY)</strong><br>
+                – Automated Python/SQL/VB workflows ( +50 % speed).<br>
+                – Built Power BI dashboards enabling real-time KPI insights.
+              </div>
+              <img class="timeline-logo" src="logo_ey.png" alt="EY">
+            </div>
+          </li>
+
         </ul>
       </div>
 
     </div>
   </div>
 </section>
+<!-- /timeline -->
 
     <section id="publications">
         <div class="container p-0">
