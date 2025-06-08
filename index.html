@@ -106,16 +106,18 @@
   font-size: 48px; /* more responsive than 60px */
 }
 
-.navbar {
-    background-color: black !important;
+.navbar{
+  background-color:rgba(255,255,255,0.95) !important;   /* translucent white */
+  box-shadow:0 2px 4px rgba(0,0,0,0.08);
 }
 
-.navbar-nav .nav-link {
-    color: white !important;
+.navbar-nav .nav-link{
+  color:#1a202c !important;        /* dark grey text */
+  font-weight:600;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #2FDEDB !important; /* Optional: highlight on hover */
+.navbar-nav .nav-link:hover{
+  color:#2FDEDB !important;        /* aqua highlight on hover */
 }
 
 #about {
@@ -141,6 +143,14 @@
   color: #333;
   line-height: 1.7;
 }
+
+.about-section{
+  background-color:#0d0d0d;   /* deep grey/black */
+  color:#f8f9fa;
+}
+
+.about-section h1{ color:#fff; }
+.about-section p { color:#dee2e6; }
 
 #imgg {
   max-width: 100%;
@@ -214,27 +224,33 @@
 
 
     <!--About-->
-    <section id="about" style="background-color: #000; color: #fff; padding: 60px 0;">
+<section id="about" class="about-section py-5">
   <div class="container">
-    <div class="row align-items-center about-row">
-      <div class="col-md-6 text-center">
-        <img id="imgg" src="About.jpg" alt="Nishad Kane" class="img-fluid rounded shadow" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);">
+    <div class="row align-items-center">
+      
+      <!-- Profile photo -->
+      <div class="col-md-5 mb-4 mb-md-0 text-center text-md-left">
+        <img src="conv.jpg"
+             alt="Nishad Kane"
+             class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-md-6">
-        <div class="about-content text-left">
-          <h1><strong>Hello!<br>I'm Nishad.</strong></h1>
-          <p>
-            Innovative, collaborative, and relentlessly data-driven, I thrive at the intersection of AI research and business value.  
-            Whether pairing with cross-functional teams or deep-diving solo into code, I bring a problem-solver’s mindset and a passion for turning raw data into elegant, high-impact products.
-            <br><br>
-            I recently graduated with an M.S. in Computer Science from Arizona State University, earning a 3.80 GPA, after spending 4+ years as a Consultant in Data Science & Analytics at Ernst & Young.  
-            This blend of academic rigor and large-scale client delivery has taught me to bridge theory and production seamlessly.
-            <br><br>
-            My core expertise lies in architecting production-grade machine-learning systems and LLM-powered applications: multi-agent RAG chatbots, hybrid log-classification pipelines, and real-time, AWS-native data streams that scale securely and cost-effectively.
-            <br><br>
-            I’m an empathetic communicator, decisive executor, and lifelong learner — always ready for the next challenge. Let’s build something impactful together.
-          </p>
-        </div>
+
+      <!-- Bio -->
+      <div class="col-md-7 text-center text-md-left">
+        <h1 class="display-4 font-weight-bold mb-3">
+          Hello!<br>I’m Nishad.
+        </h1>
+        <p class="lead">
+          Innovative, collaborative, and relentlessly data-driven, I thrive at the
+          intersection of AI research and business value.  
+          <br><br>
+          Fresh from an M.S. in Computer Science at Arizona State University (GPA 3.8) and
+          four years delivering analytics solutions at Ernst & Young, I translate complex
+          ideas into elegant, production-ready systems.  
+          <br><br>
+          My sweet-spot: architecting ML & LLM products—from multi-agent RAG chatbots to
+          Spark-powered streaming pipelines on AWS—that unlock measurable impact.
+        </p>
       </div>
     </div>
   </div>
