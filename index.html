@@ -236,36 +236,39 @@
   transform:scale(1.03);
 }
 
-.cert-section           { background:#000; }
-.cert-title {
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 2.25rem;       /* lg heading */
-  border-bottom: 2px solid #2FDEDB;
-  display: inline-block;
-  padding-bottom: 0.4rem;
-  margin-bottom: 2rem;
-}
-.cert-row img           { height:230px; object-fit:cover; }
-.cert-row h5            { color:#2FDEDB !important; font-size:1rem; }
-@media (max-width:767.98px){
-.cert-row img{ height:180px; }
+/* ───── Certifications section ───── */
+.certifications-section{
+  background:#000;
+  padding:60px 0 40px;
+  color:#fff;
 }
 
-.certifications-section {
-  background-color: #000;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.cert-title{
+  color:#fff;
+  font-weight:700;
+  font-size:2.25rem;
+  border-bottom:2px solid #2FDEDB;
+  display:inline-block;          /* underline hugs the text */
+  margin:0 auto 2rem;            /* centers the word & gives space below */
+  padding-bottom:.5rem;
 }
 
-.cert-title {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 2.25rem;
-  border-bottom: 2px solid #2FDEDB;
-  display: inline-block;
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
+/* certificate cards */
+.cert-row h5{ color:#2FDEDB!important; font-size:1rem; margin-top:1rem;}
+
+.cert-img{
+  width:100%;
+  max-height:320px;              /* same height for every row */
+  height:auto;                   /* keep aspect-ratio */
+  object-fit:contain;            /* show full picture, no cropping */
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s ease;
+}
+.cert-img:hover{ transform:scale(1.03); }
+
+@media(max-width:767.98px){
+  .cert-img{ max-height:240px; }
 }
 </style>
 
@@ -559,74 +562,101 @@
 
 
 
-<!-- ────── Certifications ────── -->
-<section id="certs" class="certifications-section">
+<!-- ───────── Certifications ───────── -->
+<section id="certs" class="certifications-section text-center">
+  <!-- centred white heading with aqua underline -->
+  <h1 class="cert-title">Certifications</h1>
+
   <div class="container">
-    <h1 class="cert-title text-center mb-4">Certifications</h1>
+    <!-- ── row 1 ── -->
+    <div class="row cert-row justify-content-center mb-5">
 
-    <!-- first row -->
-    <div class="row cert-row mb-5">
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
-          <img src="ibm.jpg" class="img-fluid rounded shadow-sm" alt="IBM DS Spec">
+        <a target="_blank"
+           href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
+          <img src="ibm.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="IBM Data Science Specialization">
         </a>
-        <h5 class="mt-2 text-info">IBM Data Science Specialization</h5>
+        <h5 class="mt-2">IBM Data Science Specialization</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
-          <img src="aws.jpg" class="img-fluid rounded shadow-sm" alt="AWS CCP">
+        <a target="_blank"
+           href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
+          <img src="aws.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="AWS Certified Cloud Practitioner">
         </a>
-        <h5 class="mt-2 text-info">AWS Certified Cloud Practitioner</h5>
+        <h5 class="mt-2">AWS Certified Cloud Practitioner</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
-          <img src="gen.jpg" class="img-fluid rounded shadow-sm" alt="GCP Gen AI">
+        <a target="_blank"
+           href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
+          <img src="gen.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="Google Cloud Generative AI">
         </a>
-        <h5 class="mt-2 text-info">Google Cloud – Generative AI</h5>
+        <h5 class="mt-2">Google Cloud – Generative AI</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
-          <img src="ibm_ml.jpg" class="img-fluid rounded shadow-sm" alt="IBM ML">
+        <a target="_blank"
+           href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
+          <img src="ibm_ml.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="IBM Machine Learning">
         </a>
-        <h5 class="mt-2 text-info">IBM Machine Learning</h5>
+        <h5 class="mt-2">IBM Machine Learning</h5>
       </div>
     </div>
 
-    <!-- second row -->
-    <div class="row cert-row">
+    <!-- ── row 2 ── -->
+    <div class="row cert-row justify-content-center">
+
       <div class="col-12 col-md-3 mb-4">
         <a target="_blank" href="https://www.hackerrank.com/nishadkane">
-          <img src="sql.jpg" class="img-fluid rounded shadow-sm" alt="SQL Gold">
+          <img src="sql.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="HackerRank SQL Gold">
         </a>
-        <h5 class="mt-2 text-info">HackerRank SQL Gold</h5>
+        <h5 class="mt-2">HackerRank SQL Gold Badge</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
-          <img src="python.jpg" class="img-fluid rounded shadow-sm" alt="Python DS">
+        <a target="_blank"
+           href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
+          <img src="python.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="Python for Data Science & AI">
         </a>
-        <h5 class="mt-2 text-info">Python for DS & AI</h5>
+        <h5 class="mt-2">Python for DS & AI</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
-          <img src="dv.jpg" class="img-fluid rounded shadow-sm" alt="Data Viz">
+        <a target="_blank"
+           href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
+          <img src="dv.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="Data Visualization">
         </a>
-        <h5 class="mt-2 text-info">Data Visualization</h5>
+        <h5 class="mt-2">Data Visualization</h5>
       </div>
 
       <div class="col-12 col-md-3 mb-4">
         <a target="_blank" href="https://leetcode.com/u/NishadK27">
-          <img src="sql_ltcd.jpg" class="img-fluid rounded shadow-sm" alt="LeetCode SQL 50">
+          <img src="sql_ltcd.jpg"
+               class="cert-img rounded shadow-sm"
+               alt="LeetCode SQL 50">
         </a>
-        <h5 class="mt-2 text-info">LeetCode SQL 50</h5>
+        <h5 class="mt-2">LeetCode SQL 50</h5>
       </div>
-    </div>
-  </div>
+
+    </div><!-- /row 2 -->
+  </div><!-- /container -->
 </section>
+
 
 <!-- ──────── Awards & Achievements ──────── -->
 <section id="awards" class="py-5">
