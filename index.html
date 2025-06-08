@@ -220,17 +220,20 @@
   .timeline-logo{ margin:16px 0 0 0; }
 }
 
-.project-image {
-  width: 100%;
-  height: 250px; /* Fixed height */
-  object-fit: cover; /* Ensures cropping instead of stretching */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+.project-image,
+.award-img{
+  width:100%;          /* span the full card */
+  max-height:350px;    /* pick a height you like for every row */
+  height:auto;         /* keep natural aspect-ratio */
+  object-fit:contain;  /* letter-box instead of crop */
+  display:block;       /* remove inline-gap & center nicely */
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s ease;
 }
-
-.project-image:hover {
-  transform: scale(1.03); /* optional hover effect */
+.project-image:hover,
+.award-img:hover{
+  transform:scale(1.03);
 }
 
 .cert-section           { background:#000; }
@@ -636,21 +639,21 @@
         <h5 class="font-weight-bold">I AM EXCEPTIONAL</h5>
         <p>Awarded EY’s “I Am Exceptional” accolade for spearheading high-impact, intellect-driven engagements across a diverse client base.</p>
         <!-- replace src once your image is in the repo -->
-        <img src="award_exceptional.jpg" alt="EY I Am Exceptional Award" class="project-image">
+        <img src="award_exceptional.jpg" alt="EY I Am Exceptional Award" class="award-img">
       </div>
 
       <!-- Award 2 -->
       <div class="col-12 col-md-4 mb-5 text-center">
         <h5 class="font-weight-bold">CODE-SHASTRA 9.0 Hackathon Runner-Up</h5>
         <p>Secured Runner-Up among 200 + teams at DJSCE CSI’s flagship “CODE-SHASTRA 9.0” 24-hour hackathon.</p>
-        <img src="award_codeshastra.jpg" alt="CODE-SHASTRA Hackathon Trophy" class="project-image">
+        <img src="award_codeshastra.jpg" alt="CODE-SHASTRA Hackathon Trophy" class="award-img">
       </div>
 
       <!-- Award 3 -->
       <div class="col-12 col-md-4 mb-5 text-center">
         <h5 class="font-weight-bold">Ideal Student of the School</h5>
         <p>Honoured as the “Ideal Student of the School” (2 000 + students) for exemplary academic results and year-round extracurricular leadership.</p>
-        <img src="award_idealstudent.jpg" alt="Ideal Student Award" class="project-image">
+        <img src="award_idealstudent.jpg" alt="Ideal Student Award" class="award-img">
       </div>
     </div>
   </div>
