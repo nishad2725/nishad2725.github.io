@@ -232,6 +232,14 @@
 .project-image:hover {
   transform: scale(1.03); /* optional hover effect */
 }
+
+.cert-section           { background:#000; }
+.cert-title             { color:#fff; font-weight:700; }
+.cert-row img           { height:230px; object-fit:cover; }
+.cert-row h5            { color:#2FDEDB !important; font-size:1rem; }
+@media (max-width:767.98px){
+  .cert-row img{ height:180px; }
+}
 </style>
 
 
@@ -524,127 +532,75 @@
 
 
 
-    <section id="certs">
-        <div class="container">
-            <br>
-            <h1>Courses & Certificates</h1>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
-                        <div class="img box">
-                            <img src="ibm.jpg" class="img-responsive">
+<!-- ────── Certifications ────── -->
+<section id="certs" class="cert-section py-5">
+  <div class="container text-center">
+    <h1 class="cert-title mb-4">Certifications</h1>
 
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
-                        <h5> &nbsp IBM Data Science Specialization </h5>
-                    </a>
+    <!-- first row -->
+    <div class="row cert-row mb-5">
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
+          <img src="ibm.jpg" class="img-fluid rounded shadow-sm" alt="IBM DS Spec">
+        </a>
+        <h5 class="mt-2 text-info">IBM Data Science Specialization</h5>
+      </div>
 
-                </div>
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
+          <img src="aws.jpg" class="img-fluid rounded shadow-sm" alt="AWS CCP">
+        </a>
+        <h5 class="mt-2 text-info">AWS Certified Cloud Practitioner</h5>
+      </div>
 
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
-                        <div class="img box">
-                            <img src="aws.jpg" class="img-responsive">
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
+          <img src="gen.jpg" class="img-fluid rounded shadow-sm" alt="GCP Gen AI">
+        </a>
+        <h5 class="mt-2 text-info">Google Cloud – Generative AI</h5>
+      </div>
 
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
-                        <h5> &nbsp AWS Certified Cloud Practitioner </h5>
-                    </a>
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
+          <img src="ibm_ml.jpg" class="img-fluid rounded shadow-sm" alt="IBM ML">
+        </a>
+        <h5 class="mt-2 text-info">IBM Machine Learning</h5>
+      </div>
+    </div>
 
-                </div>
+    <!-- second row -->
+    <div class="row cert-row">
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://www.hackerrank.com/nishadkane">
+          <img src="sql.jpg" class="img-fluid rounded shadow-sm" alt="SQL Gold">
+        </a>
+        <h5 class="mt-2 text-info">HackerRank SQL Gold</h5>
+      </div>
 
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
-                        <div class="img box">
-                            <img src="gen.jpg" class="img-responsive">
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
+          <img src="python.jpg" class="img-fluid rounded shadow-sm" alt="Python DS">
+        </a>
+        <h5 class="mt-2 text-info">Python for DS & AI</h5>
+      </div>
 
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
-                        <h5> &nbsp Google Cloud - Generative AI </h5>
-                    </a>
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
+          <img src="dv.jpg" class="img-fluid rounded shadow-sm" alt="Data Viz">
+        </a>
+        <h5 class="mt-2 text-info">Data Visualization</h5>
+      </div>
 
-                </div>
+      <div class="col-12 col-md-3 mb-4">
+        <a target="_blank" href="https://leetcode.com/u/NishadK27">
+          <img src="sql_ltcd.jpg" class="img-fluid rounded shadow-sm" alt="LeetCode SQL 50">
+        </a>
+        <h5 class="mt-2 text-info">LeetCode SQL 50</h5>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
-                        <div class="img box">
-                            <img src="ibm_ml.jpg" class="img-responsive">
-
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
-                        <h5> &nbsp IBM Machine Learning </h5>
-                    </a>
-
-                </div>
-
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://www.hackerrank.com/nishadkane">
-                        <div class="img box">
-                            <img src="sql.jpg" class="img-responsive">
-
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://www.hackerrank.com/nishadkane">
-                        <h5> &nbsp HackerRank SQL Gold Badge </h5>
-                    </a>
-
-                </div>
-
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
-                        <div class="img box">
-                            <img src="python.jpg" class="img-responsive">
-
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
-                        <h5> &nbsp Python for Data Science, AI & Development </h5>
-                    </a>
-
-                </div>
-
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
-                        <div class="img box">
-                            <img src="dv.jpg" class="img-responsive">
-
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
-                        <h5> &nbsp Data Visualization </h5>
-                    </a>
-
-                </div>
-
-                <div class="col-md-3 profile-pic text-center">
-                    <a target="_blank" href="https://leetcode.com/u/NishadK27">
-                        <div class="img box">
-                            <img src="sql_ltcd.jpg" class="img-responsive">
-
-                        </div>
-                    </a>
-                    <br>
-                    <a target="_blank" class="title-linkk" href="https://leetcode.com/u/NishadK27">
-                        <h5> &nbsp Leetcode SQL 50 </h5>
-                    </a>
-
-                </div>
-
-        </div>
-
-    </section>
 
     <!-- Awards & Achievements -->
 <section id="awards" class="section-padding bg-light">
