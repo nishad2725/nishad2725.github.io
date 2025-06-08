@@ -27,15 +27,14 @@
             </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                      </ul>
+                      <li class="nav-item"><a class="nav-link" href="#slider">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#timeline">Experience</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#publications">Projects</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#timeline">Education</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    </ul>
                     <div class="abc">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
@@ -100,47 +99,43 @@
   opacity: 0.6;
 }
 
+#slider .img-fluid       { opacity: .6; }
+.about-section .img-fluid{ opacity: 1 !important; }
+
 .carousel-caption h1 {
   font-weight: bold;
   font-family: 'Poppins', cursive;
   font-size: 48px; /* more responsive than 60px */
 }
 
-.navbar {
-    background-color: black !important;
+.navbar{
+  background-color:rgba(255,255,255,0.95) !important;   /* translucent white */
+  box-shadow:0 2px 4px rgba(0,0,0,0.08);
 }
 
-.navbar-nav .nav-link {
-    color: white !important;
+.navbar-nav .nav-link{
+  color:#1a202c !important;        /* dark grey text */
+  font-weight:600;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #2FDEDB !important; /* Optional: highlight on hover */
+.navbar-nav .nav-link:hover{
+  color:#2FDEDB !important;        /* aqua highlight on hover */
 }
 
-#about {
-  padding-top: 40px;
-  margin-top: -40px;
-  background-color: #ffffff;
+.about-section {
+  background-color:#fff;   /* white background */
+  color:#333;              /* dark text for body copy */
 }
 
-.about-row {
-  display: flex;
-  align-items: center;
-  margin: 30px 0;
+.about-section .lead {
+  color: #333 !important;
 }
 
-#about h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #000;
+.about-section h1 {
+  color:#000;              /* solid black heading */
+  font-weight:700;
 }
-
-#about p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.7;
-}
+.about-section p { color:#dee2e6; }
 
 #imgg {
   max-width: 100%;
@@ -153,239 +148,379 @@
   margin-bottom: 0; /* Remove default margin */
   padding-bottom: 0;
 }
+
+.timeline {
+  background: #000;
+  color: #fff;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #2FDEDB;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 32px;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #2FDEDB;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2FDEDB;
+}
+
+.timeline-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .timeline-list { margin-left: 24px; }
+  .timeline-list::before { left: -11px; }
+  .timeline-dot { left: -17px; }
+}
+
+/* Logo inside timeline cards */
+.timeline-logo {
+  width: auto;
+  max-height: 48px;
+  object-fit: contain;
+  margin-left: 16px;
+}
+
+/* Make card body flex-column on mobile so logo drops below text nicely */
+@media (max-width:767.98px){
+  .timeline-card{ flex-direction:column!important; }
+  .timeline-logo{ margin:16px 0 0 0; }
+}
+
+.project-image {
+  width: 100%;
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Ensures cropping instead of stretching */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03); /* optional hover effect */
+}
 </style>
 
 
     <!--About-->
-    <section id="about" style="background-color: #000; color: #fff; padding: 60px 0;">
+<section id="about" class="about-section py-5">
   <div class="container">
-    <div class="row align-items-center about-row">
-      <div class="col-md-6 text-center">
-        <img id="imgg" src="About.jpg" alt="Nishad Kane" class="img-fluid rounded shadow" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);">
+    <div class="row align-items-center">
+      
+      <!-- Profile photo -->
+      <div class="col-md-5 mb-4 mb-md-0 text-center text-md-left">
+        <img src="conv.jpg"
+             alt="Nishad Kane"
+             class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-md-6">
-        <div class="about-content text-left">
-          <h1><strong>Hello!<br>I'm Nishad.</strong></h1>
-          <p>
-            Innovative, collaborative, and relentlessly data-driven, I thrive at the intersection of AI research and business value.  
-            Whether pairing with cross-functional teams or deep-diving solo into code, I bring a problem-solver’s mindset and a passion for turning raw data into elegant, high-impact products.
-            <br><br>
-            I recently graduated with an M.S. in Computer Science from Arizona State University, earning a 3.80 GPA, after spending 4+ years as a Consultant in Data Science & Analytics at Ernst & Young.  
-            This blend of academic rigor and large-scale client delivery has taught me to bridge theory and production seamlessly.
-            <br><br>
-            My core expertise lies in architecting production-grade machine-learning systems and LLM-powered applications: multi-agent RAG chatbots, hybrid log-classification pipelines, and real-time, AWS-native data streams that scale securely and cost-effectively.
-            <br><br>
-            I’m an empathetic communicator, decisive executor, and lifelong learner — always ready for the next challenge. Let’s build something impactful together.
-          </p>
-        </div>
+
+      <!-- Bio -->
+      <div class="col-md-7 text-center text-md-left">
+        <h1 class="display-4 font-weight-bold mb-3">
+          Hello!<br>I’m Nishad.
+        </h1>
+        <p class="lead">
+          Innovative, collaborative, and relentlessly data-driven, I thrive at the
+          intersection of AI research and business value.  
+          <br><br>
+          Whether pairing with cross-functional teams or deep-diving solo into code, I bring a
+          problem-solver’s mindset and a passion for turning raw data into elegant,
+          high-impact products.
+          <br><br>
+          I recently graduated with an M.S. in Computer Science from Arizona State
+          University (GPA 3.80) after spending 4 + years as a Consultant in Data Science &
+          Analytics at Ernst & Young. This blend of academic rigor and large-scale client
+          delivery has taught me to bridge theory and production seamlessly.
+          <br><br>
+          My core expertise lies in architecting production-grade machine-learning systems
+          and LLM-powered applications: multi-agent RAG chatbots, hybrid log-classification
+          pipelines, and real-time AWS-native data streams that scale securely and
+          cost-effectively.
+          <br><br>
+          I’m an empathetic communicator, decisive executor, and lifelong learner—always
+          ready for the next challenge. Let’s build something impactful together.
+        </p>
       </div>
     </div>
   </div>
 </section>
     
-    <!-- Experience -->
-<section id="experience" style="background-color: #000; color: #fff; padding: 60px 0;">
+<!-- ───────────── Education & Experience ───────────── -->
+<section id="timeline" class="timeline py-5">
   <div class="container">
-    <h1 class="text-center mb-5">Experience</h1>
     <div class="row">
-      <!-- Left Column: EY Logo -->
-      <div class="col-md-4 text-center mb-4">
-        <img src="ey.jpg" alt="EY Logo" style="max-width: 100%; height: auto;">
+
+      <!-- === Education === -->
+      <div class="col-md-6 mb-5 mb-md-0">
+        <h2 class="section-title mb-4">Education</h2>
+        <ul class="timeline-list">
+
+          <!-- ASU -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2023 – 2025</small>
+                <h5 class="mb-1">M.S. Computer Science</h5>
+                <strong>Arizona State University</strong> · GPA 3.80<br>
+                <em>Courses:</em> Distributed Database Systems, Data Mining, AI, Data Visualization
+              </div>
+              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
+            </div>
+          </li>
+
+          <!-- DJSCE -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2015 – 2019</small>
+                <h5 class="mb-1">B.E. Information Technology</h5>
+                <strong>Dwarkadas J. Sanghavi College of Engg.</strong> · GPA 3.52<br>
+                <em>Courses:</em> Big Data Analytics, Business Intelligence, Data Structures, Cloud Computing
+              </div>
+              <img class="timeline-logo" src="logo_djsce.png" alt="DJSCE">
+            </div>
+          </li>
+
+          <!-- HSC -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2013 – 2015</small>
+                <h5 class="mb-1">Higher Secondary Certificate – Science</h5>
+                <strong>University of Kolhapur</strong> · Grade 80.31%
+              </div>
+              <img class="timeline-logo" src="logo_kolhapur.jpeg" alt="Kolhapur Univ.">
+            </div>
+          </li>
+
+          <!-- SSC -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">2007 – 2013</small>
+                <h5 class="mb-1">Secondary School Certificate</h5>
+                <strong>Tilak High School, Karad</strong> · Grade 94.18%
+              </div>
+              <img class="timeline-logo" src="logo_tilak.jpg" alt="Tilak HS">
+            </div>
+          </li>
+
+        </ul>
       </div>
 
-      <!-- Right Column: Collapsible Roles -->
-      <div class="col-md-8">
-        <div class="accordion" id="experienceAccordion">
-          <!-- Senior Analyst -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Senior Analyst (Jun 2019 – May 2021)
-                </button>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Engineered automated data workflows integrating Python, SQL, and VBScript, reducing processing time by 50%.</li>
-                  <li>Developed automation tools for SAP role redesign, mitigating business risk by 30%.</li>
-                  <li>Maintained data pipelines ensuring uptime for key operations.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <!-- === Experience === -->
+      <div class="col-md-6">
+        <h2 class="section-title mb-4">Experience</h2>
+        <ul class="timeline-list">
 
-          <!-- Associate Consultant -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Associate Consultant (Jun 2021 – Dec 2021)
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Migrated SAP ERP systems to GCP microservices using gRPC, reducing transition times by 30%.</li>
-                  <li>Built CI/CD pipelines using Git and Jenkins, speeding up ML deployments.</li>
-                  <li>Handled secure data migration for 3,000+ users with zero downtime.</li>
-                </ul>
+          <!-- GSA -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Aug 2024 – May 2025</small>
+                <h5 class="mb-1">Graduate Service Assistant</h5>
+                <strong>Arizona State University, Tempe AZ</strong><br>
+                – Improved admin efficiency 15% via grading‐automation scripts & Tableau dashboards covering 300 + students.
               </div>
+              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
             </div>
-          </div>
+          </li>
 
-          <!-- Consultant -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Consultant (Jan 2022 – Aug 2023)
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Built real-time ETL pipelines using Spark & Kafka, boosting throughput by 20%.</li>
-                  <li>Deployed ML solutions on AWS (EC2, S3, Redshift) with Kubernetes, reducing cycle time by 35%.</li>
-                  <li>Trained anomaly detection models on 10M+ records using XGBoost & MLflow.</li>
-                </ul>
+          <!-- EY Consultant -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jan 2022 – Aug 2023</small>
+                <h5 class="mb-1">Consultant, Data Science & Analytics</h5>
+                <strong>Ernst & Young (EY)</strong><br>
+                – Boosted throughput 20% with Spark-Kafka ETL pipelines.<br>
+                – Cut deployment cycles 35% by containerizing ML on AWS + Kubernetes.<br>
+                – Dropped false-positives 25% via XGBoost/Random Forest fraud models.<br>
               </div>
+              <img class="timeline-logo" src="ey.jpg" alt="EY">
             </div>
-          </div>
+          </li>
 
-        </div> <!-- End accordion -->
-      </div> <!-- End col-md-8 -->
+          <!-- EY Associate Consultant -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jun 2021 – Dec 2021</small>
+                <h5 class="mb-1">Associate Consultant, DS & Analytics</h5>
+                <br>
+                – Migrated SAP ERP to GCP micro-services (gRPC) — 30% faster.<br>
+                – Implemented Git/Jenkins CI/CD (-30 % deploy effort).<br>
+                – Automated redesign of 50 k SAP roles (-60 % manual work).
+              </div>
+              <img class="timeline-logo" src="ey.jpg" alt="EY">
+            </div>
+          </li>
+
+          <!-- EY Senior Analyst -->
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card d-flex justify-content-between shadow-sm">
+              <div>
+                <small class="text-muted">Jun 2019 – May 2021</small>
+                <h5 class="mb-1">Senior Analyst, DS & Analytics</h5>
+                <br>
+                – Automated Python/SQL/VB workflows ( +50 % speed).<br>
+                – Built Power BI dashboards enabling real-time KPI insights.
+              </div>
+              <img class="timeline-logo" src="ey.jpg" alt="EY">
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
+<!-- /timeline -->
 
-    <section id="publications">
-        <div class="container p-0">
-            <h1>Projects</h1>
-            <div class="row portfolio-row justify-content-center">
+<section id="publications">
+  <div class="container p-0">
+    <h1>Projects</h1>
+    <div class="row portfolio-row justify-content-center">
 
+      <!-- Project 1 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/RAGent-AI.git">
+            <h5>RAGent AI – Retrieval Augmented Multi-Agent Assistant</h5>
+          </a>
+          <p class="project-des">
+            RAGent AI is a powerful, visually interactive chatbot powered by LangChain, designed for RAG (Retrieval-Augmented Generation) and Multi-Agent workflows.
+            <br><br>
+            With support for OpenAI, HuggingFace, and Ollama LLMs, it’s your go-to assistant for document Q&A, semantic search, summarization, and beyond — all with a beautiful Streamlit interface.
+          </p>
+          <a target="_blank" href="https://github.com/nishad2725/RAGent-AI.git">
+            <img class="project-image" src="Ragent.jpg" alt="RAGent AI">
+          </a>
+        </div>
+      </div>
 
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/RAGent-AI.git">
-                            <h5> RAGent AI - Retrieval Augmented Multi-Agent Assistant </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>
-                            RAGent AI is a powerful, visually interactive chatbot powered by LangChain, designed for RAG (Retrieval-Augmented Generation) and Multi-Agent workflows.
-                            <br><br>
-                            With support for OpenAI, HuggingFace, and Ollama LLMs, it's your go-to assistant for document Q&A, semantic search, summarization, and beyond — all with a beautiful Streamlit interface.
+      <!-- Project 2 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
+            <h5>Log Classification using DeepSeek-R1, BERT, Regex</h5>
+          </a>
+          <p class="project-des">
+            Designed a multi-stage log classifier that routes messages through Regex rules, Sentence Transformer + Logistic Regression, and LLMs based on pattern complexity and data availability.
+            <br><br>
+            Built with Python, HuggingFace Transformers, and OpenAI API to ensure flexible and robust handling of structured and unstructured logs.
+          </p>
+          <a target="_blank" href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
+            <img class="project-image" src="log.jpeg" alt="Log Classifier">
+          </a>
+        </div>
+      </div>
 
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/nishad2725/RAGent-AI.git">
-                                <img class="portfolio-img" src="Ragent.jpg">
+      <!-- Project 3 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
+            <h5>Real-Time Stock Market Analysis</h5>
+          </a>
+          <p class="project-des">
+            I built a real-time data engineering pipeline that streams simulated stock data via Apache Kafka. Then I deployed Kafka producers/consumers on AWS EC2, storing output in S3, crawled by AWS Glue, and queried via Athena.
+          </p>
+          <a target="_blank" href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
+            <img class="project-image" src="stock.jpg" alt="Stock Analysis">
+          </a>
+        </div>
+      </div>
 
-                            </a>
+      <!-- Project 4 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
+            <h5>Autonomous Car Parking with Deep RL</h5>
+          </a>
+          <p class="project-des">
+            I developed an autonomous parking system using PPO within Unity’s ML-Agents. Trained agents park efficiently from dynamic starting points. <br><br>Course: The Planning & Learning Methods of AI
+          </p>
+          <a target="_blank" href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
+            <img class="project-image" src="RL.gif" alt="Car Parking RL">
+          </a>
+        </div>
+      </div>
 
-                        </div>
+      <!-- Project 5 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/charu167/DDS_Porject_Backend.git">
+            <h5>Distributed Payment Processing System</h5>
+          </a>
+          <p class="project-des">
+            Built a financial transaction engine using CockroachDB and Flask for resilient, concurrent operations. Backend APIs integrate seamlessly with a Next.js frontend. Emphasizes fault tolerance, real-time monitoring, and Docker deployment.
+          </p>
+          <a target="_blank" href="https://github.com/charu167/DDS_Porject_Backend.git">
+            <img class="project-image" src="payment.jpg" alt="Distributed Payments">
+          </a>
+        </div>
+      </div>
 
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
-                            <h5> Log-Classification-using-Deepseek-R1-BERT-REGEX </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>
-                            Designed a multi-stage log classifier that routes messages through Regex rules, Sentence Transformer + Logistic Regression, and LLMs based on pattern complexity and data availability.
-                           <br><br>
-                            Built with Python, HuggingFace Transformers, and OpenAI API to ensure flexible and robust handling of structured and unstructured logs.
-                            <br>
-                        </p>
-                        <br>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
-                                <img class="portfolio-img" src="log.jpeg">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Project 6 -->
+      <div class="col-12 col-md-5 mb-5">
+        <div class="text-center">
+          <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
+            <h5>Customer Churn Prediction</h5>
+          </a>
+          <p class="project-des">
+            Developed a churn classifier using PyTorch + Scikit-learn with SMOTE. Visualized churn factors using Matplotlib & Seaborn, boosting predictive performance to 95% accuracy. <br><br>Course: Data Mining
+          </p>
+          <a target="_blank" href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
+            <img class="project-image" src="Cust.jpg" alt="Churn Prediction">
+          </a>
+        </div>
+      </div>
 
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
-                            <h5> Real-Time Stock Market Analysis </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>I built an end-to-end real-time data engineering pipeline that streams simulated stock market data using Apache Kafka. 
-                            <br><br>Then, I implemented Kafka producers and consumers in Python, deployed on AWS EC2, to efficiently handle continuous data flow. 
-                            <br><br> The ingested data is stored in Amazon S3, processed using AWS Glue crawlers, and made queryable through Athena using SQL.
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
-                                <img class="img-fluid portfolio-img" src="stock.jpg">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
-                            <h5>Autonomous Car Parking using Deep Reinforcement Learning </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>In this project, I developed an autonomous parking system leveraging Deep Reinforcement Learning (DRL), specifically utilizing Proximal Policy Optimization (PPO) algorithms within Unity’s ML-Agents framework. 
-                            <br><br>The trained agents effectively navigated and parked in virtual environments, adapting to diverse initial positions and dynamic constraints. 
-                            <br><br> Course: The Planning & Learning Methods of AI
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
-                                <img class="img-fluid portfolio-img" src="RL.gif">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/charu167/DDS_Porject_Backend.git">
-                            <br>
-                            <h5>Distributed Payment Processing System </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>In this project, I built a Distributed Payment Processing System using CockroachDB to handle reliable, concurrent financial transactions across multiple geographical regions. 
-                            <br><br>Leveraging Flask, I developed backend RESTful APIs integrated seamlessly with a Next.js frontend. 
-                            <br><br> The architecture emphasizes scalability, fault tolerance, and real-time operational insights, demonstrating expertise in distributed databases, containerized deployments with Docker, and robust data consistency mechanisms.
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/charu167/DDS_Porject_Backend.git">
-                                <img class="portfolio-img" src="payment.jpg">
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a target="_blank" class="title-linkk" href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
-                            <h5> Customer Churn Prediction Model </h5>
-                        </a>
-                        <p class="project-des">
-                            <br>In this project, I developed an E-Commerce Customer Churn Prediction model using PyTorch and Scikit-learn, achieving an accuracy of 95%. 
-                             By applying SMOTE, I effectively balanced the dataset to enhance predictive performance. I further conducted comprehensive exploratory data analysis, employing Matplotlib and Seaborn to visualize key churn indicators, and created heatmaps to clearly illustrate influential correlations.
-                            <br><br> Course: Data Mining
-                        </p>
-                        <div class="row">
-                            <a target="_blank" href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
-                                <img class="portfolio-img" src="Cust.jpg">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 
 
