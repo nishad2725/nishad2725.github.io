@@ -153,6 +153,63 @@
   margin-bottom: 0; /* Remove default margin */
   padding-bottom: 0;
 }
+
+.timeline {
+  background: #000;
+  color: #fff;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #2FDEDB;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 32px;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #2FDEDB;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2FDEDB;
+}
+
+.timeline-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .timeline-list { margin-left: 24px; }
+  .timeline-list::before { left: -11px; }
+  .timeline-dot { left: -17px; }
+}
 </style>
 
 
@@ -183,81 +240,65 @@
   </div>
 </section>
     
-    <!-- Experience -->
-<section id="experience" style="background-color: #000; color: #fff; padding: 60px 0;">
+<!-- ──────── Education & Experience ──────── -->
+<section id="timeline" class="timeline py-5">
   <div class="container">
-    <h1 class="text-center mb-5">Experience</h1>
     <div class="row">
-      <!-- Left Column: EY Logo -->
-      <div class="col-md-4 text-center mb-4">
-        <img src="ey.jpg" alt="EY Logo" style="max-width: 100%; height: auto;">
+      
+      <!-- === Education === -->
+      <div class="col-md-6 mb-5 mb-md-0">
+        <h2 class="section-title mb-4">Education</h2>
+        <ul class="timeline-list">
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card shadow-sm">
+              <small class="text-muted">2023 – 2025</small>
+              <h5 class="mb-1">M.S. Computer Science</h5>
+              <p class="mb-0">Arizona State University · GPA 3.80</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card shadow-sm">
+              <small class="text-muted">2015 – 2019</small>
+              <h5 class="mb-1">B.Tech. Information Technology</h5>
+              <p class="mb-0">Savitribai Phule Pune University</p>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <!-- Right Column: Collapsible Roles -->
-      <div class="col-md-8">
-        <div class="accordion" id="experienceAccordion">
-          <!-- Senior Analyst -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Senior Analyst (Jun 2019 – May 2021)
-                </button>
-              </h5>
+      <!-- === Experience === -->
+      <div class="col-md-6">
+        <h2 class="section-title mb-4">Experience</h2>
+        <ul class="timeline-list">
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card shadow-sm">
+              <small class="text-muted">Jan 2022 – Aug 2023</small>
+              <h5 class="mb-1">Consultant, EY</h5>
+              <p class="mb-0">Deployed ML workloads on AWS, built Spark-Kafka pipelines, reduced delivery time by 35%.</p>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Engineered automated data workflows integrating Python, SQL, and VBScript, reducing processing time by 50%.</li>
-                  <li>Developed automation tools for SAP role redesign, mitigating business risk by 30%.</li>
-                  <li>Maintained data pipelines ensuring uptime for key operations.</li>
-                </ul>
-              </div>
+          </li>
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card shadow-sm">
+              <small class="text-muted">Jun 2021 – Dec 2021</small>
+              <h5 class="mb-1">Associate Consultant, EY</h5>
+              <p class="mb-0">Migrated SAP to GCP microservices, created Git/Jenkins CI/CD workflows.</p>
             </div>
-          </div>
+          </li>
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-card shadow-sm">
+              <small class="text-muted">Jun 2019 – May 2021</small>
+              <h5 class="mb-1">Senior Analyst, EY</h5>
+              <p class="mb-0">Automated data pipelines using Python & SQL, reducing manual time by 50%.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-          <!-- Associate Consultant -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Associate Consultant (Jun 2021 – Dec 2021)
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Migrated SAP ERP systems to GCP microservices using gRPC, reducing transition times by 30%.</li>
-                  <li>Built CI/CD pipelines using Git and Jenkins, speeding up ML deployments.</li>
-                  <li>Handled secure data migration for 3,000+ users with zero downtime.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Consultant -->
-          <div class="card bg-dark text-white border-secondary">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Consultant (Jan 2022 – Aug 2023)
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#experienceAccordion">
-              <div class="card-body">
-                <ul>
-                  <li>Built real-time ETL pipelines using Spark & Kafka, boosting throughput by 20%.</li>
-                  <li>Deployed ML solutions on AWS (EC2, S3, Redshift) with Kubernetes, reducing cycle time by 35%.</li>
-                  <li>Trained anomaly detection models on 10M+ records using XGBoost & MLflow.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div> <!-- End accordion -->
-      </div> <!-- End col-md-8 -->
     </div>
   </div>
 </section>
