@@ -10,51 +10,54 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .nav-link{color:#1a202c!important;font-weight:600}
 .nav-link:hover{color:#2FDEDB!important}
 
-/* ─────────── Section backgrounds (blurred images) ─────────── */
-.about-section,
-.timeline-section,
-.projects-section{          /* three sections that need images */
-  position:relative;
-  overflow:hidden;
-  color:#fff;              /* white text over image */
-}
+/* ─────────── SECTION BACKGROUNDS (plain colours) ─────────── */
+.about-section   {background:#000;color:#fff;}
+.timeline-section{background:#fff;color:#000;}
+.projects-section{background:#000;color:#fff;}
 
+/* remove old slider-image layers */
 .about-section::before,
 .timeline-section::before,
-.projects-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  filter:blur(10px);        /* soft blur */
-  transform:scale(1.1);    /* avoid edge clipping */
-  z-index:0;
-}
+.projects-section::before{content:none}
 
-.about-section::before   {background-image:url("slider_1.jpg");}
-.timeline-section::before{background-image:url("slider_3.jpg");}
-.projects-section::before{background-image:url("slider_2.jpg");}
-
-/* keep content above the blurred layer */
+/* keep inner content above background */
 .about-section   > .container,
 .timeline-section> .container,
 .projects-section> .container{position:relative;z-index:1}
 
-/* ─────────── About layout tweaks ─────────── */
-.about-row{margin:0;align-items:stretch}
-.about-row .col-md-5,.about-row .col-md-7{display:flex;align-items:center}
-#imgg{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
-.portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px}
+/* ─────────── About: equal photo & text columns ─────────── */
+.about-row{margin:0}
+.about-row .col-md-6{display:flex;align-items:center}          /* 50-50 columns, equal height */
+#imgg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+.portfolio-btn{
+  background:#2FDEDB;border:none;color:#000;
+  padding:.6rem 1.5rem;font-weight:600;border-radius:4px;
+}
 .portfolio-btn:hover{background:#00008B;color:#fff}
 
 /* ─────────── Timeline (Education & Experience) ─────────── */
 .section-title{font-weight:700;color:#2FDEDB}
 .timeline-list{list-style:none;margin-left:32px;position:relative;padding:0}
-.timeline-list::before{content:'';position:absolute;left:-15px;top:0;width:2px;height:100%;background:#2FDEDB}
-.timeline-dot{position:absolute;left:-22px;top:6px;width:14px;height:14px;border-radius:50%;background:#2FDEDB}
-.timeline-card{background:rgba(17,17,17,.85);border:1px solid #333;border-radius:6px;padding:20px;color:#fff;transition:.3s}
-.timeline-card:hover{box-shadow:0 10px 25px rgba(0,255,255,.15);transform:translateY(-4px)}
+.timeline-list::before{
+  content:'';position:absolute;left:-15px;top:0;
+  width:2px;height:100%;background:#2FDEDB;
+}
+.timeline-dot{
+  position:absolute;left:-22px;top:6px;
+  width:14px;height:14px;border-radius:50%;background:#2FDEDB;
+}
+/* dark cards on white background */
+.timeline-card{
+  background:#111;border:1px solid #333;border-radius:6px;
+  padding:20px;color:#fff;transition:.3s;
+}
+.timeline-card:hover{box-shadow:0 10px 25px rgba(0,0,0,.15);transform:translateY(-4px)}
 .timeline-card summary{cursor:pointer;list-style:none;font-weight:600}
 .timeline-card summary::-webkit-details-marker{display:none}
 .timeline-logo{max-height:48px;object-fit:contain;margin-left:16px}
@@ -68,22 +71,28 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .title-linkk h5{color:#2FDEDB!important}
 .title-linkk:hover h5{text-decoration:underline}
 .project-des{color:#dee2e6;margin:1rem 0 2rem;font-size:1rem;line-height:1.55}
-.project-image{width:100%;max-height:350px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s}
+.project-image{
+  width:100%;max-height:350px;height:auto;
+  object-fit:contain;border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
 .project-image:hover{transform:scale(1.03)}
 
 /* ─────────── Certifications ─────────── */
 .certifications-section{background:#fff;color:#000;padding:60px 0 40px}
 .cert-title{
-  font-size:2.25rem;
-  font-weight:700;
-  color:#fff;               /* white heading */
-  background:#000;
-  padding:.3rem 1.25rem;
-  border-radius:6px;
-  display:inline-block;
+  font-size:2.25rem;font-weight:700;
+  color:#fff;background:#000;
+  padding:.3rem 1.25rem;border-radius:6px;display:inline-block;
 }
 .cert-row h5{color:#2FDEDB!important;font-size:1rem;margin-top:1rem}
-.cert-img{width:100%;max-height:320px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s}
+.cert-img{
+  width:100%;max-height:320px;height:auto;
+  object-fit:contain;border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
 .cert-img:hover{transform:scale(1.03)}
 @media(max-width:767.98px){.cert-img{max-height:240px}}
 
@@ -91,20 +100,21 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .awards-section{background:#000;color:#fff}
 .awards-section .row{justify-content:center}
 .award-img{
-  width:100%;
-  max-height:300px;
-  height:auto;
-  object-fit:contain;
-  border-radius:8px;
+  width:100%;max-height:300px;height:auto;
+  object-fit:contain;border-radius:8px;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
-  transition:transform .3s ease;
+  transition:transform .3s;
 }
 .award-img:hover{transform:scale(1.03)}
 
 /* ─────────── Footer ─────────── */
 .site-footer{background:#26272b;padding:45px 0 20px;font-size:15px;color:#737373}
 .site-footer a{color:#737373}.site-footer a:hover{color:#2FDEDB;text-decoration:none}
-.social-icons a{width:40px;height:40px;line-height:40px;margin:0 6px;border-radius:50%;background:#33353d;color:#fff;display:inline-block;transition:.2s}
+.social-icons a{
+  width:40px;height:40px;line-height:40px;margin:0 6px;
+  border-radius:50%;background:#33353d;color:#fff;
+  display:inline-block;transition:.2s;
+}
 .social-icons a:hover{background:#2FDEDB;color:#000}
 
 /* ─────────── Helpers ─────────── */
