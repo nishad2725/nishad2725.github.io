@@ -27,14 +27,14 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
   inset:0;
   background-size:cover;
   background-position:center;
-  filter:blur(12px);        /* soft blur */
+  filter:blur(10px);        /* soft blur */
   transform:scale(1.1);    /* avoid edge clipping */
   z-index:0;
 }
 
 .about-section::before   {background-image:url("slider_1.jpg");}
-.timeline-section::before{background-image:url("slider_2.jpg");}
-.projects-section::before{background-image:url("slider_3.jpg");}
+.timeline-section::before{background-image:url("slider_3.jpg");}
+.projects-section::before{background-image:url("slider_2.jpg");}
 
 /* keep content above the blurred layer */
 .about-section   > .container,
