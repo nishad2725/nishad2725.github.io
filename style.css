@@ -10,35 +10,28 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .nav-link{color:#1a202c!important;font-weight:600}
 .nav-link:hover{color:#2FDEDB!important}
 
-/* ─────────── Blurred-image helper ─────────── */
-.about-section,
+/* ─────────── Section backgrounds (images, no blur) ─────────── */
+.about-section{
+  background:url("slider_1.jpg") center/cover no-repeat;
+  color:#fff;
+}
 .timeline-section{
-  position:relative;
-  overflow:hidden;
+  background:url("slider_2.jpg") center/cover no-repeat;
+  color:#fff;
 }
-.about-section::before,
-.timeline-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  filter:blur(6px);
-  transform:scale(1.1);          /* avoid edge clipping after blur */
-  z-index:0;
+.projects-section{
+  background:url("slider_3.jpg") center/cover no-repeat;
+  color:#fff;
 }
-.about-section::before   {background-image:url("slider_1.jpg");}
-.timeline-section::before{background-image:url("slider_3.jpg");}
 
-.about-section > .container,
-.timeline-section > .container{position:relative;z-index:1}
-
-/* ─────────── About text tweaks ─────────── */
-#about{color:#fff}             /* white text over image */
-#about h1{color:#fff}
+/* ─────────── About layout tweaks ─────────── */
+.about-row{margin:0;align-items:stretch}
+.about-row .col-md-5,.about-row .col-md-7{display:flex;align-items:center}
+#imgg{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px}
+.portfolio-btn:hover{background:#00008B;color:#fff}
 
 /* ─────────── Timeline (Education & Experience) ─────────── */
-.timeline-section{color:#fff;padding:60px 0}
 .section-title{font-weight:700;color:#2FDEDB}
 .timeline-list{list-style:none;margin-left:32px;position:relative;padding:0}
 .timeline-list::before{content:'';position:absolute;left:-15px;top:0;width:2px;height:100%;background:#2FDEDB}
@@ -53,8 +46,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
   .timeline-card{flex-direction:column!important}.timeline-logo{margin:16px 0 0}
 }
 
-/* ─────────── Projects ─────────── */
-.projects-section{background:#000;color:#fff}
+/* ─────────── Projects (text & images) ─────────── */
 .projects-section .section-title{color:#fff;text-align:center;font-size:2.5rem}
 .title-linkk h5{color:#2FDEDB!important}
 .title-linkk:hover h5{text-decoration:underline}
@@ -67,8 +59,8 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .cert-title{
   font-size:2.25rem;
   font-weight:700;
-  color:#fff;                 /* white text */
-  background:#000;            /* black pill so it’s visible */
+  color:#fff;               /* white heading */
+  background:#000;
   padding:.3rem 1.25rem;
   border-radius:6px;
   display:inline-block;
@@ -80,7 +72,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 
 /* ─────────── Awards ─────────── */
 .awards-section{background:#000;color:#fff}
-.awards-section .row{justify-content:center} /* centered columns */
+.awards-section .row{justify-content:center}
 .award-img{
   width:100%;
   max-height:300px;
