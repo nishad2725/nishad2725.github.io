@@ -19,37 +19,38 @@
 
     <body>
         <section id="nav-bar">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                      <li class="nav-item"><a class="nav-link" href="#slider">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#timeline">Experience</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#publications">Projects</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#timeline">Education</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                    </ul>
-                    <div class="abc">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/nishad2725">GitHub</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://linkedin.com/in/nskane">LinkedIn</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="https://www.hackerrank.com/nishadkane">HackerRank</a>
-                            </li>
-                        </ul>
-                    </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-1">
 
-                </div>
-            </nav>
-        </section>
+    <!-- burger -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- centred menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <!-- internal links -->
+        <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#timeline">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#timeline">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+
+        <!-- external links -->
+        <li class="nav-item"><a class="nav-link" href="https://github.com/nishad2725" target="_blank">GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/nskane"  target="_blank">LinkedIn</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.hackerrank.com/nishadkane" target="_blank">HackerRank</a></li>
+
+      </ul>
+    </div>
+
+  </nav>
+</section>
 
     <!--About-->
 <section id="about" class="about-section pb-5">
@@ -161,7 +162,7 @@
         </ul>
       </div>
 
-      <!-- === Experience === -->
+      <!-- === Experience (collapsible) === -->
       <div class="col-md-6">
         <h2 class="section-title mb-4">Experience</h2>
         <ul class="timeline-list">
@@ -169,62 +170,78 @@
           <!-- GSA -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">Aug 2024 – May 2025</small>
-                <h5 class="mb-1">Graduate Service Assistant</h5>
-                <strong>Arizona State University, Tempe AZ</strong><br>
-                – Improved admin efficiency 15% via grading‐automation scripts & Tableau dashboards covering 300 + students.
-              </div>
-              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
-            </div>
+            <details class="timeline-card shadow-sm">
+              <summary class="d-flex justify-content-between align-items-start">
+                <div>
+                  <small class="text-muted">Aug 2024 – May 2025</small>
+                  <h5 class="mb-1">Graduate Service Assistant</h5>
+                  <strong>Arizona State University, Tempe AZ</strong>
+                </div>
+                <img class="timeline-logo" src="logo_asu.png" alt="ASU">
+              </summary>
+              <ul class="mb-0 pl-4 pt-2">
+                <li>Improved admin efficiency 15 % via grading-automation scripts &amp; Tableau dashboards covering 300 + students.</li>
+              </ul>
+            </details>
           </li>
 
           <!-- EY Consultant -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">Jan 2022 – Aug 2023</small>
-                <h5 class="mb-1">Consultant, Data Science & Analytics</h5>
-                <strong>Ernst & Young (EY)</strong><br>
-                – Boosted throughput 20% with Spark-Kafka ETL pipelines.<br>
-                – Cut deployment cycles 35% by containerizing ML on AWS + Kubernetes.<br>
-                – Dropped false-positives 25% via XGBoost/Random Forest fraud models.<br>
-              </div>
-              <img class="timeline-logo" src="ey.jpg" alt="EY">
-            </div>
+            <details class="timeline-card shadow-sm">
+              <summary class="d-flex justify-content-between align-items-start">
+                <div>
+                  <small class="text-muted">Jan 2022 – Aug 2023</small>
+                  <h5 class="mb-1">Consultant, Data Science &amp; Analytics</h5>
+                  <strong>Ernst &amp; Young (EY)</strong>
+                </div>
+                <img class="timeline-logo" src="ey.jpg" alt="EY">
+              </summary>
+              <ul class="mb-0 pl-4 pt-2">
+                <li>Boosted throughput 20 % with Spark-Kafka ETL pipelines.</li>
+                <li>Cut deployment cycles 35 % by containerizing ML on AWS + Kubernetes.</li>
+                <li>Dropped false-positives 25 % via XGBoost / Random Forest fraud models.</li>
+              </ul>
+            </details>
           </li>
 
           <!-- EY Associate Consultant -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">Jun 2021 – Dec 2021</small>
-                <h5 class="mb-1">Associate Consultant, DS & Analytics</h5>
-                <br>
-                – Migrated SAP ERP to GCP micro-services (gRPC) — 30% faster.<br>
-                – Implemented Git/Jenkins CI/CD (-30 % deploy effort).<br>
-                – Automated redesign of 50 k SAP roles (-60 % manual work).
-              </div>
-              <img class="timeline-logo" src="ey.jpg" alt="EY">
-            </div>
+            <details class="timeline-card shadow-sm">
+              <summary class="d-flex justify-content-between align-items-start">
+                <div>
+                  <small class="text-muted">Jun 2021 – Dec 2021</small>
+                  <h5 class="mb-1">Associate Consultant, DS &amp; Analytics</h5>
+                  <strong>Ernst &amp; Young (EY)</strong>
+                </div>
+                <img class="timeline-logo" src="ey.jpg" alt="EY">
+              </summary>
+              <ul class="mb-0 pl-4 pt-2">
+                <li>Migrated SAP ERP to GCP micro-services (gRPC) — 30 % faster.</li>
+                <li>Implemented Git/Jenkins CI / CD (-30 % deploy effort).</li>
+                <li>Automated redesign of 50 k SAP roles (-60 % manual work).</li>
+              </ul>
+            </details>
           </li>
 
           <!-- EY Senior Analyst -->
           <li>
             <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">Jun 2019 – May 2021</small>
-                <h5 class="mb-1">Senior Analyst, DS & Analytics</h5>
-                <br>
-                – Automated Python/SQL/VB workflows ( +50 % speed).<br>
-                – Built Power BI dashboards enabling real-time KPI insights.
-              </div>
-              <img class="timeline-logo" src="ey.jpg" alt="EY">
-            </div>
+            <details class="timeline-card shadow-sm">
+              <summary class="d-flex justify-content-between align-items-start">
+                <div>
+                  <small class="text-muted">Jun 2019 – May 2021</small>
+                  <h5 class="mb-1">Senior Analyst, DS &amp; Analytics</h5>
+                  <strong>Ernst &amp; Young (EY)</strong>
+                </div>
+                <img class="timeline-logo" src="ey.jpg" alt="EY">
+              </summary>
+              <ul class="mb-0 pl-4 pt-2">
+                <li>Automated Python / SQL / VB workflows (+50 % speed).</li>
+                <li>Built Power BI dashboards enabling real-time KPI insights.</li>
+              </ul>
+            </details>
           </li>
 
         </ul>
