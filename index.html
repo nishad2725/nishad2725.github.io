@@ -1,22 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Nishad | Portfolio</title>
 
-    <head>
-        <title> My Portfolio Website </title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="style.css">
 
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="skills-diagram.coderbits.js"></script>
-
-            <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-
-        </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 
     <body>
@@ -52,185 +50,6 @@
                 </div>
             </nav>
         </section>
-<style>
-.img-fluid {
-  opacity: 0.6;
-}
-
-#slider .img-fluid       { opacity: .6; }
-.about-section .img-fluid{ opacity: 1 !important; }
-
-.carousel-caption h1 {
-  font-weight: bold;
-  font-family: 'Poppins', cursive;
-  font-size: 48px; /* more responsive than 60px */
-}
-
-.navbar{
-  background-color:rgba(255,255,255,0.95) !important;   /* translucent white */
-  box-shadow:0 2px 4px rgba(0,0,0,0.08);
-}
-
-.navbar-nav .nav-link{
-  color:#1a202c !important;        /* dark grey text */
-  font-weight:600;
-}
-
-.navbar-nav .nav-link:hover{
-  color:#2FDEDB !important;        /* aqua highlight on hover */
-}
-
-.about-section {
-  background-color:#fff;   /* white background */
-  color:#333;              /* dark text for body copy */
-}
-
-.about-section .lead {
-  color: #333 !important;
-}
-
-.about-section h1 {
-  color:#000;              /* solid black heading */
-  font-weight:700;
-}
-.about-section p { color:#dee2e6; }
-
-#imgg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-#slider {
-  margin-bottom: 0; /* Remove default margin */
-  padding-bottom: 0;
-}
-
-.timeline {
-  background: #000;
-  color: #fff;
-}
-
-.section-title {
-  font-weight: 700;
-  color: #2FDEDB;
-}
-
-.timeline-list {
-  list-style: none;
-  padding: 0;
-  margin-left: 32px;
-  position: relative;
-}
-
-.timeline-list::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #2FDEDB;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -22px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #2FDEDB;
-}
-
-.timeline-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 6px;
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.timeline-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
-  transform: translateY(-4px);
-}
-
-/* Mobile */
-@media (max-width: 767.98px) {
-  .timeline-list { margin-left: 24px; }
-  .timeline-list::before { left: -11px; }
-  .timeline-dot { left: -17px; }
-}
-
-/* Logo inside timeline cards */
-.timeline-logo {
-  width: auto;
-  max-height: 48px;
-  object-fit: contain;
-  margin-left: 16px;
-}
-
-/* Make card body flex-column on mobile so logo drops below text nicely */
-@media (max-width:767.98px){
-  .timeline-card{ flex-direction:column!important; }
-  .timeline-logo{ margin:16px 0 0 0; }
-}
-
-.project-image,
-.award-img{
-  width:100%;          /* span the full card */
-  max-height:350px;    /* pick a height you like for every row */
-  height:auto;         /* keep natural aspect-ratio */
-  object-fit:contain;  /* letter-box instead of crop */
-  display:block;       /* remove inline-gap & center nicely */
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
-  transition:transform .3s ease;
-}
-.project-image:hover,
-.award-img:hover{
-  transform:scale(1.03);
-}
-
-/* ───── Certifications section ───── */
-.cert-title{
-  color:#fff !important;      /* force white so it stands out on the black bg  */
-  font-weight:700;
-  font-size:2.25rem;
-  border-bottom:2px solid #2FDEDB;
-  display:inline-block;
-  padding-bottom:.5rem;
-  margin:0 auto 2rem;         /* centre + gap below */
-}
-
-.certifications-section{
-  background:#000;
-  padding:60px 0 40px;
-  color:#fff;
-}
-
-
-/* certificate cards */
-.cert-row h5{ color:#2FDEDB!important; font-size:1rem; margin-top:1rem;}
-
-.cert-img{
-  width:100%;
-  max-height:320px;              /* same height for every row */
-  height:auto;                   /* keep aspect-ratio */
-  object-fit:contain;            /* show full picture, no cropping */
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
-  transition:transform .3s ease;
-}
-.cert-img:hover{ transform:scale(1.03); }
-
-@media(max-width:767.98px){
-  .cert-img{ max-height:240px; }
-}
-</style>
-
 
     <!--About-->
 <section id="about" class="about-section pb-5">
@@ -657,6 +476,16 @@
     </div>
   </footer>
 </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
     </body>
 
 </html>
