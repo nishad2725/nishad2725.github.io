@@ -5,7 +5,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 
 /* ─────────── Navbar ─────────── */
 #nav-bar{background:rgba(255,255,255,.95);box-shadow:0 2px 4px rgba(0,0,0,.08);z-index:1000}
-.navbar-collapse{flex-grow:0;margin:0 auto}          /* ⬅ centre whole menu block */
+.navbar-collapse{flex-grow:0;margin:0 auto}
 .navbar-nav{display:flex;gap:1.25rem}
 .nav-link{color:#1a202c!important;font-weight:600}
 .nav-link:hover{color:#2FDEDB!important}
@@ -18,8 +18,8 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px}
 .portfolio-btn:hover{background:#00008B;color:#fff}
 
-/* ─────────── Education & Experience ─────────── */
-#education,#experience,.education-section,.experience-section{background:#000;color:#fff;padding:60px 0}
+/* ─────────── Timeline (Education & Experience) ─────────── */
+.timeline-section{background:#000;color:#fff;padding:60px 0}
 .section-title{font-weight:700;color:#2FDEDB}
 .timeline-list{list-style:none;margin-left:32px;position:relative;padding:0}
 .timeline-list::before{content:'';position:absolute;left:-15px;top:0;width:2px;height:100%;background:#2FDEDB}
@@ -35,12 +35,15 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 }
 
 /* ─────────── Projects ─────────── */
-#projects,.projects-section{background:#000;color:#fff}
-#projects h1,#projects h2,.projects-section h2{text-align:center;margin-bottom:2rem}
-.project-image,.award-img{width:100%;max-height:350px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s}
-.project-image:hover,.award-img:hover{transform:scale(1.03)}
+.projects-section{background:#000;color:#fff}
+.projects-section .section-title{color:#fff;text-align:center;font-size:2.5rem}
+.title-linkk h5{color:#2FDEDB!important}
+.title-linkk:hover h5{text-decoration:underline}
+.project-des{color:#dee2e6;margin:1rem 0 2rem;font-size:1rem;line-height:1.55}
+.project-image{width:100%;max-height:350px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s}
+.project-image:hover{transform:scale(1.03)}
 
-/* ─────────── Certifications (unchanged) ─────────── */
+/* ─────────── Certifications & Awards (unchanged) ─────────── */
 .certifications-section{background:#000;color:#fff;padding:60px 0 40px}
 .cert-title{font-size:2.25rem;font-weight:700;border-bottom:2px solid #2FDEDB;display:inline-block;padding-bottom:.5rem}
 .cert-row h5{color:#2FDEDB!important;font-size:1rem;margin-top:1rem}
