@@ -15,6 +15,12 @@ body{
   box-shadow:0 2px 4px rgba(0,0,0,.08);
   z-index:1000;
 }
+.navbar-nav{
+  width:100%;
+  display:flex;
+  justify-content:center;   /* center the <li> items */
+  margin:0!important;       /* override .mx-auto spacing */
+}
 .nav-link{color:#1a202c!important;font-weight:600}
 .nav-link:hover{color:#2FDEDB!important}
 
@@ -22,13 +28,19 @@ body{
 #about{background:#000;color:#fff}
 #about h1{color:#fff}
 #about .lead{color:#fff}
+.about-row{margin:30px auto;align-items:stretch}   /* same height columns */
+
+.about-row .col-md-5,
+.about-row .col-md-7{display:flex;align-items:center}
+
 #imgg{
-  max-width:100%;
-  height:auto;
+  width:100%;
+  height:100%;               /* fill column height */
+  object-fit:cover;          /* crop gracefully */
   border-radius:8px;
   box-shadow:0 4px 12px rgba(0,0,0,.3);
 }
-.about-row{margin:30px auto}
+
 .portfolio-btn{
   background:#2FDEDB;
   border:none;
@@ -40,8 +52,11 @@ body{
 }
 .portfolio-btn:hover{background:#00008B;color:#fff}
 
-/* ─────────── Timeline / Experience ─────────── */
+/* ─────────── Education & Experience timelines ─────────── */
+#education,#experience,
+.education-section,.experience-section,
 .timeline-section{background:#000;color:#fff;padding:60px 0}
+
 .section-title{font-weight:700;color:#2FDEDB}
 .timeline-list{
   list-style:none;
@@ -68,6 +83,7 @@ body{
   border:1px solid #333;
   border-radius:6px;
   padding:20px;
+  color:#fff;                             /* 🌟 NEW – readable text */
   transition:transform .3s ease,box-shadow .3s ease;
 }
 .timeline-card:hover{
@@ -79,6 +95,7 @@ body{
   object-fit:contain;
   margin-left:16px;
 }
+
 @media(max-width:767.98px){
   .timeline-list{margin-left:24px}
   .timeline-list::before{left:-11px}
@@ -87,14 +104,18 @@ body{
   .timeline-logo{margin:16px 0 0}
 }
 
-/* ─────────── Project & Award images ─────────── */
+/* ─────────── Projects ─────────── */
+#projects{background:#000;color:#fff}
+#projects .section-title{
+  text-align:center;
+  color:#fff;                /* heading in white on black */
+}
 .project-image,
 .award-img{
   width:100%;
   max-height:350px;
   height:auto;
   object-fit:contain;
-  display:block;
   border-radius:8px;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
   transition:transform .3s ease;
@@ -102,7 +123,7 @@ body{
 .project-image:hover,
 .award-img:hover{transform:scale(1.03)}
 
-/* ─────────── Certifications ─────────── */
+/* ─────────── Certifications (unchanged) ─────────── */
 .certifications-section{background:#000;color:#fff;padding:60px 0 40px}
 .cert-title{
   font-size:2.25rem;
@@ -126,7 +147,7 @@ body{
   .cert-img{max-height:240px}
 }
 
-/* ─────────── Footer ─────────── */
+/* ─────────── Footer (unchanged) ─────────── */
 .site-footer{
   background:#26272b;
   padding:45px 0 20px;
@@ -136,13 +157,9 @@ body{
 .site-footer a{color:#737373}
 .site-footer a:hover{color:#2FDEDB;text-decoration:none}
 .social-icons a{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin:0 6px;
-  border-radius:50%;
-  background:#33353d;
-  color:#fff;
+  width:40px;height:40px;line-height:40px;
+  margin:0 6px;border-radius:50%;
+  background:#33353d;color:#fff;
   display:inline-block;
   transition:background .2s ease;
 }
