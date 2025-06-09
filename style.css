@@ -27,7 +27,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
   inset:0;
   background-size:cover;
   background-position:center;
-  filter:blur(6px);        /* soft blur */
+  filter:blur(12px);        /* soft blur */
   transform:scale(1.1);    /* avoid edge clipping */
   z-index:0;
 }
