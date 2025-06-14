@@ -59,7 +59,7 @@
       
       <!-- Profile photo -->
       <div class="col-md-6 mb-4 mb-md-0 text-center text-md-left about-col">
-        <img src="convo.jpg"
+        <img src="conv.jpg"
              alt="Nishad Kane"
              class="img-fluid rounded shadow-sm">
       </div>
@@ -160,94 +160,104 @@
       </div>
 
       <!-- === Experience (collapsible) === -->
-      <div class="col-md-6">
-        <h2 class="section-title mb-4">Experience</h2>
-        <ul class="timeline-list">
+<div class="col-md-6">
+  <h2 class="section-title mb-4">Experience</h2>
+  <ul class="timeline-list">
 
-          <!-- GSA -->
-          <li>
-            <span class="timeline-dot"></span>
-            <details class="timeline-card shadow-sm">
-              <summary class="d-flex justify-content-between align-items-start">
-                <div>
-                  <small class="text-muted">Aug 2024 – May 2025</small>
-                  <h5 class="mb-1">Graduate Service Assistant</h5>
-                  <strong>Arizona State University, Tempe AZ</strong>
-                </div>
-                <img class="timeline-logo" src="logo_asu.png" alt="ASU">
-              </summary>
-              <ul class="mb-0 pl-4 pt-2">
-                <li>Improved admin efficiency 15 % via grading-automation scripts &amp; Tableau dashboards covering 300 + students.</li>
-              </ul>
-            </details>
-          </li>
-
-          <!-- EY Consultant -->
-          <li>
-            <span class="timeline-dot"></span>
-            <details class="timeline-card shadow-sm">
-              <summary class="d-flex justify-content-between align-items-start">
-                <div>
-                  <small class="text-muted">Jan 2022 – Aug 2023</small>
-                  <h5 class="mb-1">Consultant, Data Science &amp; Analytics</h5>
-                  <strong>Ernst &amp; Young (EY)</strong>
-                </div>
-                <img class="timeline-logo" src="ey.jpg" alt="EY">
-              </summary>
-              <ul class="mb-0 pl-4 pt-2">
-                <li>Boosted throughput 20 % with Spark-Kafka ETL pipelines.</li>
-                <li>Cut deployment cycles 35 % by containerizing ML on AWS + Kubernetes.</li>
-                <li>Dropped false-positives 25 % via XGBoost / Random Forest fraud models.</li>
-              </ul>
-            </details>
-          </li>
-
-          <!-- EY Associate Consultant -->
-          <li>
-            <span class="timeline-dot"></span>
-            <details class="timeline-card shadow-sm">
-              <summary class="d-flex justify-content-between align-items-start">
-                <div>
-                  <small class="text-muted">Jun 2021 – Dec 2021</small>
-                  <h5 class="mb-1">Associate Consultant, DS &amp; Analytics</h5>
-                  <strong>Ernst &amp; Young (EY)</strong>
-                </div>
-                <img class="timeline-logo" src="ey.jpg" alt="EY">
-              </summary>
-              <ul class="mb-0 pl-4 pt-2">
-                <li>Migrated SAP ERP to GCP micro-services (gRPC) — 30 % faster.</li>
-                <li>Implemented Git/Jenkins CI / CD (-30 % deploy effort).</li>
-                <li>Automated redesign of 50 k SAP roles (-60 % manual work).</li>
-              </ul>
-            </details>
-          </li>
-
-          <!-- EY Senior Analyst -->
-          <li>
-            <span class="timeline-dot"></span>
-            <details class="timeline-card shadow-sm">
-              <summary class="d-flex justify-content-between align-items-start">
-                <div>
-                  <small class="text-muted">Jun 2019 – May 2021</small>
-                  <h5 class="mb-1">Senior Analyst, DS &amp; Analytics</h5>
-                  <strong>Ernst &amp; Young (EY)</strong>
-                </div>
-                <img class="timeline-logo" src="ey.jpg" alt="EY">
-              </summary>
-              <ul class="mb-0 pl-4 pt-2">
-                <li>Automated Python / SQL / VB workflows (+50 % speed).</li>
-                <li>Built Power BI dashboards enabling real-time KPI insights.</li>
-              </ul>
-            </details>
-          </li>
-
+    <!-- Graduate Service Assistant -->
+    <li>
+      <span class="timeline-dot"></span>
+      <details class="timeline-card shadow-sm">
+        <summary class="d-flex justify-content-between align-items-start">
+          <div>
+            <small class="text-muted">Aug 2024 – May 2025</small>
+            <h5 class="mb-1">Graduate Service Assistant</h5>
+            <strong>Arizona State University · Tempe, AZ</strong>
+          </div>
+          <img class="timeline-logo" src="logo_asu.png" alt="ASU">
+        </summary>
+        <ul class="mb-0 pl-4 pt-2">
+          <li>Graded 100 + homework, quiz, and exam submissions each week using Canvas &amp; Gradescope—100 % on-time feedback.</li>
+          <li>Proctored exams for 50 + students, safeguarding academic integrity and fair testing conditions.</li>
+          <li>Co-ordinated test material preparation / collection for a 120-student class, streamlining the assessment workflow.</li>
+          <li>Built a Python + SQL grading-data pipeline that automated grade ingestion and reporting.</li>
+          <li>Created Tableau dashboards for 150 + students, improving data-retrieval speed by 20 %.</li>
+          <li>Maintained gradebook accuracy with Microsoft Excel / OneDrive tracking.</li>
         </ul>
-      </div>
+      </details>
+    </li>
 
-    </div>
-  </div>
-</section>
-<!-- /timeline -->
+    <!-- EY – Consultant -->
+    <li>
+      <span class="timeline-dot"></span>
+      <details class="timeline-card shadow-sm">
+        <summary class="d-flex justify-content-between align-items-start">
+          <div>
+            <small class="text-muted">Jan 2022 – Aug 2023</small>
+            <h5 class="mb-1">Consultant, Data Science &amp; Analytics</h5>
+            <strong>Ernst &amp; Young (EY)</strong>
+          </div>
+          <img class="timeline-logo" src="ey.jpg" alt="EY">
+        </summary>
+        <ul class="mb-0 pl-4 pt-2">
+          <li>Built an anomaly-detection model for 10 M + financial transactions, cutting false positives 25 %.</li>
+          <li>Engineered Spark + Kafka pipelines that improved real-time data delivery 20 %.</li>
+          <li>Deployed containerized ML services on AWS (EC2 / S3 / Redshift) with Kubernetes, shrinking release cycles 35 %.</li>
+          <li>Implemented SAP Service Ticket ML + NLP routing, reducing issue resolution time by 3 hrs.</li>
+          <li>Led a six-member team operating ETL workflows in SAP Data Intelligence; reported KPIs to board directors.</li>
+          <li>Modeled authorization workflows in SAS/STAT, boosting processing speed 40 %.</li>
+          <li>Visualized insights in Power BI &amp; Excel, delivering SoD risk dashboards and 10 CAB presentations.</li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- EY – Associate Consultant -->
+    <li>
+      <span class="timeline-dot"></span>
+      <details class="timeline-card shadow-sm">
+        <summary class="d-flex justify-content-between align-items-start">
+          <div>
+            <small class="text-muted">Jul 2021 – Jan 2022</small>
+            <h5 class="mb-1">Associate Consultant, Data Science &amp; Analytics</h5>
+            <strong>Ernst &amp; Young (EY)</strong>
+          </div>
+          <img class="timeline-logo" src="ey.jpg" alt="EY">
+        </summary>
+        <ul class="mb-0 pl-4 pt-2">
+          <li>Delivered Power BI KPI dashboards for 6 clients, enabling data-driven decision-making.</li>
+          <li>Implemented Git + Jenkins CI/CD for ML models, reducing response times 30 %.</li>
+          <li>Ran application workshops, UAT, and user-training sessions with CFOs &amp; stakeholders.</li>
+          <li>Designed GRC rulesets and continuous-risk-monitoring frameworks for multiple industries.</li>
+          <li>Led SAP ERP → S/4 HANA migration and GCP data migration for 3 000 + users.</li>
+          <li>Built risk &amp; controls matrices and managed SAP role design during a large automotive merger.</li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- EY – Senior Analyst -->
+    <li>
+      <span class="timeline-dot"></span>
+      <details class="timeline-card shadow-sm">
+        <summary class="d-flex justify-content-between align-items-start">
+          <div>
+            <small class="text-muted">Jun 2019 – Jul 2021</small>
+            <h5 class="mb-1">Senior Analyst, Data Science &amp; Analytics</h5>
+            <strong>Ernst &amp; Young (EY)</strong>
+          </div>
+          <img class="timeline-logo" src="ey.jpg" alt="EY">
+        </summary>
+        <ul class="mb-0 pl-4 pt-2">
+          <li>Automated Python &amp; VBScript workflows, halving data-processing time.</li>
+          <li>Managed SAP user provisioning across multi-client landscapes.</li>
+          <li>Co-developed SQL tooling that redesigned 10 K + SAP roles, eliminating 30 % critical and 50 % high risks.</li>
+          <li>Executed SAP GRC modules (ARA, EAM, BRM, UAR, ARM) end-to-end for multiple clients.</li>
+        </ul>
+      </details>
+    </li>
+
+  </ul>
+</div>
+<!-- /Experience -->
 
 <!-- ───────────── Projects ───────────── -->
 <section id="projects" class="projects-section section-padding py-5">

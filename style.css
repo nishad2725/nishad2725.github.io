@@ -4,7 +4,14 @@
 body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior:smooth}
 
 /* ─────────── Navbar ─────────── */
-#nav-bar{background:rgba(255,255,255,.95);box-shadow:0 2px 4px rgba(0,0,0,.08);z-index:1000}
+#nav-bar{
+  position: sticky;          /* 👈 keeps the bar “stuck” at the top */
+  top: 0;                    /* 👈 stick *to* the very top edge     */
+  width: 100%;               /* full-width so it spans the page     */
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  z-index: 1000;             /* sits above everything else          */
+}
 .navbar-collapse{flex-grow:0;margin:0 auto}
 .navbar-nav{display:flex;gap:1.25rem}
 .nav-link{color:#1a202c!important;font-weight:600}
