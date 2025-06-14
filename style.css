@@ -5,36 +5,76 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 
 /* ─────────── Navbar ─────────── */
 #nav-bar{
-  position: sticky;          /* 👈 keeps the bar “stuck” at the top */
-  top: 0;                    /* 👈 stick *to* the very top edge     */
-  width: 100%;               /* full-width so it spans the page     */
+  position: sticky;          /* keeps the bar “stuck” at the top */
+  top: 0;                    /* stick to the very top edge       */
+  width: 100%;               /* full‑width so it spans the page  */
   background: rgba(255,255,255,.95);
   box-shadow: 0 2px 4px rgba(0,0,0,.08);
-  z-index: 1000;             /* sits above everything else          */
+  z-index: 1000;             /* sits above everything else       */
 }
 .navbar-collapse{flex-grow:0;margin:0 auto}
 .navbar-nav{display:flex;gap:1.25rem}
 .nav-link{color:#1a202c!important;font-weight:600}
 .nav-link:hover{color:#2FDEDB!important}
 
-/* ─────────── SECTION BACKGROUNDS (plain colours) ─────────── */
-.about-section   {background:#000;color:#fff;}
-.timeline-section{background:#fff;color:#000;}
-.projects-section{background:#000;color:#fff;}
-
-/* remove old slider-image layers */
-.about-section::before,
-.timeline-section::before,
-.projects-section::before{content:none}
+/* ─────────── SECTION BACKGROUNDS (base colours) ─────────── */
+.about-section        {background:#000;color:#fff;}
+.timeline-section     {background:#fff;color:#000;}
+.projects-section     {background:#000;color:#fff;}
+.certifications-section{background:#fff;color:#000;padding:60px 0 40px}
+.awards-section       {background:#000;color:#fff}
 
 /* keep inner content above background */
 .about-section   > .container,
 .timeline-section> .container,
-.projects-section> .container{position:relative;z-index:1}
+.projects-section> .container,
+.certifications-section> .container,
+.awards-section > .container{position:relative;z-index:1}
+
+/* ─────────── Section image backgrounds ─────────── */
+.about-section,
+.timeline-section,
+.projects-section,
+.certifications-section,
+.awards-section{
+  position:relative;
+  overflow:hidden;
+}
+
+.about-section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg") center/cover no-repeat;
+  z-index:-1;
+}
+.timeline-section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("img2.jpg") center/cover no-repeat;
+  z-index:-1;
+}
+.projects-section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img3.jpg") center/cover no-repeat;
+  z-index:-1;
+}
+.certifications-section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg") center/cover no-repeat;
+  z-index:-1;
+}
+.awards-section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img5.jpg") center/cover no-repeat;
+  z-index:-1;
+}
 
 /* ─────────── About: equal photo & text columns ─────────── */
 .about-row{margin:0}
-.about-row .col-md-6{display:flex;align-items:center}          /* 50-50 columns, equal height */
+.about-row .col-md-6{display:flex;align-items:center}          /* 50‑50 columns, equal height */
 #imgg{
   width:100%;
   height:100%;
@@ -87,7 +127,6 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .project-image:hover{transform:scale(1.03)}
 
 /* ─────────── Certifications ─────────── */
-.certifications-section{background:#fff;color:#000;padding:60px 0 40px}
 .cert-title{
   font-size:2.25rem;font-weight:700;
   color:#fff;background:#000;
@@ -104,7 +143,6 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 @media(max-width:767.98px){.cert-img{max-height:240px}}
 
 /* ─────────── Awards ─────────── */
-.awards-section{background:#000;color:#fff}
 .awards-section .row{justify-content:center}
 .award-img{
   width:100%;max-height:300px;height:auto;
