@@ -111,5 +111,5 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .social-icons a:hover{background:#2FDEDB;color:#000}
 
 /* ─────────── Helpers ─────────── */
-.section-padding{padding:60px 0}
+.section-padding{padding:60px 0} 
 .text-center{text-align:center!important}
