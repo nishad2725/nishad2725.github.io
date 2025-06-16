@@ -113,3 +113,57 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 /* ─────────── Helpers ─────────── */
 .section-padding{padding:60px 0}
 .text-center{text-align:center!important}
+
+/* ─────────── 1.  NAV-BAR  ─────────── */
+#nav-bar,
+.navbar                     { background:#000 !important; }
+.navbar-light .nav-link,
+.navbar-nav  .nav-link      { color:#fff  !important; }   /* default white */
+.navbar-nav  .nav-link:hover{ color:#2FDEDB !important; } /* keep aqua hover */
+
+/* ─────────── 2.  ABOUT PHOTO (-20 %)  ─────────── */
+#about .img-fluid{ max-width:80%; height:auto; }          /* shrink width & keep ratio */
+
+/* ─────────── 3.  FULL-WIDTH SECTION BACKGROUNDS  ─────────── */
+/*  Each section already fills the viewport; we just make the background
+    cover the entire element instead of the centre container.               */
+#about{                                          /* About  */
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("img1.jpg") center/cover fixed no-repeat;
+}
+#timeline{                                       /* Experience + Education  */
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("img2.jpg") center/cover fixed no-repeat;
+}
+#publications{                                   /* Projects  */
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("img3.jpg") center/cover fixed no-repeat;
+}
+#certs{                                          /* Certifications  */
+  position:relative;
+  color:#000;
+  background:
+    linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
+    url("img4.jpg") center/cover fixed no-repeat;
+}
+#awards{                                         /* Awards  */
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("img5.jpg") center/cover fixed no-repeat;
+}
+
+/* (OPTIONAL) make the background stay in place during scroll on desktop   */
+@media (min-width:768px){
+  #about,#timeline,#publications,#certs,#awards{ background-attachment:fixed; }
+}
