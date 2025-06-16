@@ -1,169 +1,115 @@
 /* ─────────── Global ─────────── */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333}
 
 /* ─────────── Navbar ─────────── */
-#nav-bar{
-  position:sticky;top:0;width:100%;
-  background:rgba(255,255,255,.95);
-  box-shadow:0 2px 4px rgba(0,0,0,.08);
-  z-index:1000;
+#nav-bar           {position:sticky;top:0;width:100%;z-index:1000}
+#nav-bar nav       {background:#000!important;box-shadow:0 2px 4px rgba(0,0,0,.25)}
+.navbar-nav        {display:flex;gap:1.25rem}
+.navbar-nav .nav-link{color:#fff!important;font-weight:600}
+.navbar-nav .nav-link:hover{color:#2FDEDB!important}
+
+/* ─────────── Shared helpers ─────────── */
+.section-padding{padding:60px 0}
+
+/* ─────────── Section-level full-width image backgrounds ─────────── */
+#about,#experience,#education,#publications,#certs,#awards{
+  position:relative;overflow:hidden;
 }
-.navbar-collapse{flex-grow:0;margin:0 auto}
-.navbar-nav{display:flex;gap:1.25rem}
-.nav-link{color:#1a202c!important;font-weight:600}
-.nav-link:hover{color:#2FDEDB!important}
-
-/* ─────────── SECTION TYPOGRAPHY / COLOUR (no solid backgrounds) ─────────── */
-.about-section        {color:#fff;}
-.timeline-section     {color:#000;}
-.projects-section     {color:#fff;}
-.certifications-section{color:#000;padding:60px 0 40px}
-.awards-section       {color:#fff;}
-
-/* keep inner content above background */
-.about-section   > .container,
-.timeline-section> .container,
-.projects-section> .container,
-.certifications-section> .container,
-.awards-section > .container{position:relative;z-index:1}
-
-/* ─────────── Section image backgrounds ─────────── */
-.about-section,
-.timeline-section,
-.projects-section,
-.certifications-section,
-.awards-section{position:relative;overflow:hidden;}
-
-.about-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg") center/cover no-repeat;
+#about::before,
+#experience::before,
+#education::before,
+#publications::before,
+#certs::before,
+#awards::before{
+  content:"";
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;   /* Parallax-style on desktop */
   z-index:-1;
 }
-.timeline-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("img2.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.projects-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img3.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.certifications-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.awards-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img5.jpg") center/cover no-repeat;
-  z-index:-1;
+/* individual images + dim overlays */
+#about::before       {background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg");}
+#experience::before,
+#education::before   {background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img2.jpg");}
+#publications::before{background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img3.jpg");}
+#certs::before       {background-image:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg");}
+#awards::before      {background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img5.jpg");}
+
+/* keep Bootstrap .container above the pseudo background */
+#about .container,
+#experience .container,
+#education .container,
+#publications .container,
+#certs .container,
+#awards .container{position:relative;z-index:1}
+
+/* ─────────── About ─────────── */
+#about{color:#fff}
+#about .about-row{margin:0}
+#about .about-row .col-md-6{display:flex;align-items:center}
+#about .img-fluid{
+  max-width:80%;     /* –20 % width */
+  height:auto;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.6);
 }
 
-/* ─────────── About: equal photo & text columns ─────────── */
-.about-row{margin:0}
-.about-row .col-md-6{display:flex;align-items:center}
-#imgg{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4);}
-.portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px;}
-.portfolio-btn:hover{background:#00008B;color:#fff}
-
-/* ─────────── Timeline (Education & Experience) ─────────── */
-.section-title{font-weight:700;color:#2FDEDB}
-.timeline-list{list-style:none;margin-left:32px;position:relative;padding:0}
-.timeline-list::before{content:'';position:absolute;left:-15px;top:0;width:2px;height:100%;background:#2FDEDB;}
-.timeline-dot{position:absolute;left:-22px;top:6px;width:14px;height:14px;border-radius:50%;background:#2FDEDB;}
-.timeline-card{background:#111;border:1px solid #333;border-radius:6px;padding:20px;color:#fff;transition:.3s;}
-.timeline-card:hover{box-shadow:0 10px 25px rgba(0,0,0,.15);transform:translateY(-4px)}
-.timeline-card summary{cursor:pointer;list-style:none;font-weight:600}
-.timeline-card summary::-webkit-details-marker{display:none}
-.timeline-logo{max-height:48px;object-fit:contain;margin-left:16px}
-@media(max-width:767.98px){
-  .timeline-list{margin-left:24px}.timeline-list::before{left:-11px}.timeline-dot{left:-17px}
-  .timeline-card{flex-direction:column!important}.timeline-logo{margin:16px 0 0}
-}
+/* ─────────── Experience / Education Accordion ─────────── */
+#experience, #education{color:#fff}
+.timeline-logo{max-height:48px;object-fit:contain}
 
 /* ─────────── Projects ─────────── */
-.projects-section .section-title{color:#fff;text-align:center;font-size:2.5rem}
+#publications{color:#fff}
+.portfolio-img,.project-image{
+  width:100%;height:220px;            /* uniform height */
+  object-fit:cover;border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
+.portfolio-img:hover,.project-image:hover{transform:scale(1.03)}
 .title-linkk h5{color:#2FDEDB!important}
 .title-linkk:hover h5{text-decoration:underline}
 .project-des{color:#dee2e6;margin:1rem 0 2rem;font-size:1rem;line-height:1.55}
-.project-image{width:100%;max-height:350px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s;}
-.project-image:hover{transform:scale(1.03)}
 
 /* ─────────── Certifications ─────────── */
-.cert-title{font-size:2.25rem;font-weight:700;color:#fff;background:#000;padding:.3rem 1.25rem;border-radius:6px;display:inline-block;}
-.cert-row h5{color:#2FDEDB!important;font-size:1rem;margin-top:1rem}
-.cert-img{width:100%;max-height:320px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s;}
-.cert-img:hover{transform:scale(1.03)}
-@media(max-width:767.98px){.cert-img{max-height:240px}}
+#certs .cert-title{
+  font-size:2.25rem;font-weight:700;color:#fff;
+  background:#000;padding:.3rem 1.25rem;border-radius:6px;
+  display:inline-block;
+}
+#certs h5{color:#2FDEDB!important;font-size:1rem;margin-top:1rem}
+#certs .cert-img{
+  width:100%;max-height:320px;height:auto;
+  object-fit:contain;border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
+#certs .cert-img:hover{transform:scale(1.03)}
+/* breathing-room between cert rows */
+#certs .row + .row{margin-top:2.5rem}
+@media(max-width:767.98px){#certs .cert-img{max-height:240px}}
 
 /* ─────────── Awards ─────────── */
-.awards-section .row{justify-content:center}
-.award-img{width:100%;max-height:300px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .3s;}
+#awards{color:#fff}
+#awards .row{justify-content:center}
+.award-img{
+  width:100%;max-height:260px;height:auto;object-fit:contain;
+  border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
 .award-img:hover{transform:scale(1.03)}
 
 /* ─────────── Footer ─────────── */
 .site-footer{background:#26272b;padding:45px 0 20px;font-size:15px;color:#737373}
-.site-footer a{color:#737373}.site-footer a:hover{color:#2FDEDB;text-decoration:none}
-.social-icons a{width:40px;height:40px;line-height:40px;margin:0 6px;border-radius:50%;background:#33353d;color:#fff;display:inline-block;transition:.2s;}
+.site-footer a{color:#737373}
+.site-footer a:hover{color:#2FDEDB;text-decoration:none}
+.social-icons a{
+  width:40px;height:40px;line-height:40px;margin:0 6px;border-radius:50%;
+  background:#33353d;color:#fff;display:inline-block;transition:.2s;
+}
 .social-icons a:hover{background:#2FDEDB;color:#000}
-
-/* ─────────── Helpers ─────────── */
-.section-padding{padding:60px 0}
-.text-center{text-align:center!important}
-
-/* ─────────── 1.  NAV-BAR  ─────────── */
-#nav-bar,
-.navbar                     { background:#000 !important; }
-.navbar-light .nav-link,
-.navbar-nav  .nav-link      { color:#fff  !important; }   /* default white */
-.navbar-nav  .nav-link:hover{ color:#2FDEDB !important; } /* keep aqua hover */
-
-/* ─────────── 2.  ABOUT PHOTO (-20 %)  ─────────── */
-#about .img-fluid{ max-width:80%; height:auto; }          /* shrink width & keep ratio */
-
-/* ─────────── 3.  FULL-WIDTH SECTION BACKGROUNDS  ─────────── */
-/*  Each section already fills the viewport; we just make the background
-    cover the entire element instead of the centre container.               */
-#about{                                          /* About  */
-  position:relative;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("img1.jpg") center/cover fixed no-repeat;
-}
-#timeline{                                       /* Experience + Education  */
-  position:relative;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
-    url("img2.jpg") center/cover fixed no-repeat;
-}
-#publications{                                   /* Projects  */
-  position:relative;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
-    url("img3.jpg") center/cover fixed no-repeat;
-}
-#certs{                                          /* Certifications  */
-  position:relative;
-  color:#000;
-  background:
-    linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
-    url("img4.jpg") center/cover fixed no-repeat;
-}
-#awards{                                         /* Awards  */
-  position:relative;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
-    url("img5.jpg") center/cover fixed no-repeat;
-}
-
-/* (OPTIONAL) make the background stay in place during scroll on desktop   */
-@media (min-width:768px){
-  #about,#timeline,#publications,#certs,#awards{ background-attachment:fixed; }
-}
