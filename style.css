@@ -33,12 +33,12 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 
 .about-section::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img7.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg") center/cover no-repeat;
   z-index:-1;
 }
 .timeline-section::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("img1.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("img7.jpg") center/cover no-repeat;
   z-index:-1;
 }
 .projects-section::before{
@@ -48,7 +48,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 }
 .certifications-section::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img3.jpg") center/cover no-repeat;
   z-index:-1;
 }
 .awards-section::before{
