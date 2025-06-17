@@ -1,7 +1,8 @@
 /* ─────────── Global ─────────── */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333}
 
 /* ─────────── Navbar ─────────── */
 #nav-bar           {position:sticky;top:0;width:100%;z-index:1000}
@@ -10,53 +11,53 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 .navbar-nav .nav-link{color:#fff!important;font-weight:600}
 .navbar-nav .nav-link:hover{color:#2FDEDB!important}
 
+/* ─────────── Shared helpers ─────────── */
+.section-padding{padding:60px 0}
 
-/* keep inner content above background */
-.about-section   > .container,
-.timeline-section> .container,
-.projects-section> .container,
-.certifications-section> .container,
-.awards-section > .container{position:relative;z-index:1}
+/* ─────────── Section-level full-width image backgrounds ─────────── */
+#about,#experience,#education,#publications,#certs,#awards{
+  position:relative;overflow:hidden;
+}
+#about::before,
+#experience::before,
+#education::before,
+#publications::before,
+#certs::before,
+#awards::before{
+  content:"";
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;   /* Parallax-style on desktop */
+  z-index:-1;
+}
+/* individual images + dim overlays */
+#about::before       {background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg");}
+#experience::before,
+#education::before   {background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img2.jpg");}
+#publications::before{background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img3.jpg");}
+#certs::before       {background-image:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg");}
+#awards::before      {background-image:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("img5.jpg");}
 
-/* ─────────── Section image backgrounds ─────────── */
-.about-section,
-.timeline-section,
-.projects-section,
-.certifications-section,
-.awards-section{position:relative;overflow:hidden;}
+/* keep Bootstrap .container above the pseudo background */
+#about .container,
+#experience .container,
+#education .container,
+#publications .container,
+#certs .container,
+#awards .container{position:relative;z-index:1}
 
-.about-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("img1.jpg") center/cover no-repeat;
-  z-index:-1;
+/* ─────────── About ─────────── */
+#about{color:#fff}
+#about .about-row{margin:0}
+#about .about-row .col-md-6{display:flex;align-items:center}
+#about .img-fluid{
+  max-width:80%;     /* –20 % width */
+  height:auto;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.6);
 }
-.timeline-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("img2.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.projects-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img3.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.certifications-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("img4.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-.awards-section::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("img5.jpg") center/cover no-repeat;
-  z-index:-1;
-}
-
-/* ─────────── About: equal photo & text columns ─────────── */
-.about-row{margin:0}
-.about-row .col-md-6{display:flex;align-items:center}
-#imgg{width:80%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4);}
-.portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px;}
-.portfolio-btn:hover{background:#00008B;color:#fff}
 
 /* ─────────── Timeline (Education & Experience) ─────────── */
 .section-title{font-weight:700;color:#2FDEDB}
