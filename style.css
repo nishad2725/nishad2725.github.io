@@ -54,7 +54,7 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#333;scroll-behavior
 /* ─────────── About: equal photo & text columns ─────────── */
 .about-row{margin:0}
 .about-row .col-md-6{display:flex;align-items:center}
-#imgg{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4);}
+#imgg{width:80%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.4);}
 .portfolio-btn{background:#2FDEDB;border:none;color:#000;padding:.6rem 1.5rem;font-weight:600;border-radius:4px;}
 .portfolio-btn:hover{background:#00008B;color:#fff}
 
