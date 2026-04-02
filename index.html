@@ -1,375 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Nishad | Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nishad Kane — AI Engineer & Data Scientist. M.S. CS Arizona State University. LLM-powered systems, RAG, real-time ML pipelines.">
+  <meta name="author" content="Nishad Kane">
+  <title>Nishad Kane | AI Engineer & Data Scientist</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nishad Kane | AI Engineer & Data Scientist">
+  <meta property="og:description" content="AI Engineer building LLM-powered systems and real-time ML pipelines.">
+  <meta property="og:url" content="https://nishad2725.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
   <!-- Site CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Vendor CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
- 
-    <body>
-        <section id="nav-bar">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-1">
+<body>
 
-    <!-- burger -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+<!-- ═══════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">NK<span class="brand-dot">.</span></a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- centred menu -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#timeline">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#timeline">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech-stack">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certs">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certs">Certs</a></li>
         <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://github.com/nishad2725">GitHub</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/nskane">LinkedIn</a></li>
+        <li class="nav-item ms-2">
+          <a class="btn btn-primary btn-sm" href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
+  </div>
+</nav>
 
-  </nav> 
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div id="particles-js"></div>
+
+  <div class="hero-content">
+    <p class="hero-greeting">Hi there, I'm</p>
+    <h1 class="hero-name">Nishad Kane</h1>
+    <h2 class="hero-role"><span id="typed-output"></span></h2>
+    <p class="hero-tagline">
+      Building intelligent systems at the intersection of LLMs,<br>
+      real-time data, and product thinking.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+      <a href="https://www.linkedin.com/in/nishad-kane/" target="_blank" rel="noopener"
+         class="btn btn-outline-light btn-lg">
+        <i class="fab fa-linkedin me-2"></i>Connect
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator"><span></span></div>
 </section>
 
-    <!--About-->
-<section id="about" class="about-section pb-5">
-  <div class="container position-relative">
-    <div class="row align-items-center">
-      
-      <!-- Profile photo -->
-      <div class="col-md-6 mb-4 mb-md-0 text-center text-md-left about-col">
-        <img src="conv.jpg"
-             alt="Nishad Kane"
-             class="img-fluid rounded shadow-sm">
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Photo -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="about-photo-wrapper">
+          <img src="assets/images/profile/conv.jpg" alt="Nishad Kane" class="about-photo">
+          <div class="about-badge">
+            <i class="fas fa-brain"></i>
+            <span>AI Engineer</span>
+          </div>
+        </div>
       </div>
 
       <!-- Bio -->
-      <div class="col-md-6 text-center text-md-left about-col">
-        <h1 class="display-4 font-weight-bold mb-3">
-          Hello!<br>I’m Nishad.
-        </h1>
-        <p class="lead">
-          Innovative, collaborative, and relentlessly data-driven, I thrive at the
-          intersection of AI research and business value.  
-          <br><br>
-          Whether pairing with cross-functional teams or deep-diving solo into code, I bring a
-          problem-solver’s mindset and a passion for turning raw data into high-impact products.
-          <br><br>
-          I recently graduated with an M.S. in Computer Science from Arizona State
-          University (GPA 3.80) after spending 4 + years as a Consultant in Data Science &
-          Analytics at Ernst & Young.
-          <br><br>
-          My core expertise lies in architecting production-grade ML systems
-          and LLM-powered applications: RAG chatbots, hybrid log-classification
-          pipeline, and real-time AWS-native data streams that scale securely and
-          cost-effectively.
-          <br><br>
-          I’m an empathetic communicator, decisive executor, and lifelong learner! Let’s build something impactful together.
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-heading">Bridging ML Research<br>&amp; Real-World Impact</h2>
+        <p class="about-text">
+          I'm an AI Engineer and product-minded developer who bridges the gap between
+          cutting-edge machine learning research and real-world impact. With 4+ years
+          building data-driven solutions at EY and an M.S. in Computer Science from
+          Arizona State University, I specialize in designing intelligent systems —
+          from LLM-powered RAG applications to real-time ML pipelines. I think in
+          products, move with data, and build for humans.
         </p>
-      </div>
-    </div>
-  </div>
-</section>
-    
-<!--───────────── Education  & Experience ─────────────-->
-<section id="timeline" class="timeline-section py-5">
-  <div class="container position-relative">
-    <div class="row">
 
-      <!-- === Education === -->
-      <div class="col-md-6 mb-5 mb-md-0">
-        <h2 class="section-title mb-4">Education</h2>
-        <ul class="timeline-list">
-
-          <!-- ASU -->
-          <li>
-            <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">2023 – 2025</small>
-                <h5 class="mb-1">M.S. Computer Science</h5>
-                <strong>Arizona State University</strong> · GPA 3.80<br>
-                <em>Courses:</em> Distributed Database Systems, Data Mining, AI, Data Visualization
-              </div>
-              <img class="timeline-logo" src="logo_asu.png" alt="ASU">
-            </div>
-          </li>
-
-          <!-- DJSCE -->
-          <li>
-            <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">2015 – 2019</small>
-                <h5 class="mb-1">B.E. Information Technology</h5>
-                <strong>Dwarkadas J. Sanghavi College of Engg.</strong> · GPA 3.52<br>
-                <em>Courses:</em> Big Data Analytics, Business Intelligence, Data Structures, Cloud Computing
-              </div>
-              <img class="timeline-logo" src="logo_djsce.png" alt="DJSCE">
-            </div>
-          </li>
-
-          <!-- HSC -->
-          <li>
-            <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">2013 – 2015</small>
-                <h5 class="mb-1">Higher Secondary Certificate – Science</h5>
-                <strong>University of Kolhapur</strong> · Grade 80.31%
-              </div>
-              <img class="timeline-logo" src="logo_kolhapur.jpeg" alt="Kolhapur Univ.">
-            </div>
-          </li>
-
-          <!-- SSC -->
-          <li>
-            <span class="timeline-dot"></span>
-            <div class="timeline-card d-flex justify-content-between shadow-sm">
-              <div>
-                <small class="text-muted">2007 – 2013</small>
-                <h5 class="mb-1">Secondary School Certificate</h5>
-                <strong>Tilak High School, Karad</strong> · Grade 94.18%
-              </div>
-              <img class="timeline-logo" src="logo_tilak.jpg" alt="Tilak HS">
-            </div>
-          </li>
-
-        </ul>
-      </div>
-
-      <!-- === Experience (collapsible) === -->
-<div class="col-md-6">
-  <h2 class="section-title mb-4">Experience</h2>
-  <ul class="timeline-list">
-
-    <!-- Graduate Service Assistant -->
-    <li>
-      <span class="timeline-dot"></span>
-      <details class="timeline-card shadow-sm">
-        <summary class="d-flex justify-content-between align-items-start">
-          <div>
-            <small class="text-muted">Aug 2024 – May 2025</small>
-            <h5 class="mb-1">Graduate Service Assistant</h5>
-            <strong>Arizona State University · Tempe, AZ</strong>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Years at EY</span>
           </div>
-          <img class="timeline-logo" src="logo_asu.png" alt="ASU">
-        </summary>
-        <ul class="mb-0 pl-4 pt-2">
-          <li>Graded 100 + homework, quiz, and exam submissions each week using Canvas &amp; Gradescope—100 % on-time feedback.</li>
-          <li>Proctored exams for 50 + students, safeguarding academic integrity and fair testing conditions.</li>
-          <li>Co-ordinated test material preparation / collection for a 120-student class, streamlining the assessment workflow.</li>
-          <li>Built a Python + SQL grading-data pipeline that automated grade ingestion and reporting.</li>
-          <li>Created Tableau dashboards for 150 + students, improving data-retrieval speed by 20 %.</li>
-          <li>Maintained gradebook accuracy with Microsoft Excel / OneDrive tracking.</li>
-        </ul>
-      </details>
-    </li>
-
-    <!-- EY – Consultant -->
-    <li>
-      <span class="timeline-dot"></span>
-      <details class="timeline-card shadow-sm">
-        <summary class="d-flex justify-content-between align-items-start">
-          <div>
-            <small class="text-muted">Jan 2022 – Aug 2023</small>
-            <h5 class="mb-1">Consultant, Data Science &amp; Analytics</h5>
-            <strong>Ernst &amp; Young (EY)</strong>
+          <div class="stat-item">
+            <span class="stat-number">3.80</span>
+            <span class="stat-label">M.S. GPA @ ASU</span>
           </div>
-          <img class="timeline-logo" src="ey.jpg" alt="EY">
-        </summary>
-        <ul class="mb-0 pl-4 pt-2">
-          <li>Built an anomaly-detection model for 10 M + financial transactions, cutting false positives 25 %.</li>
-          <li>Engineered Spark + Kafka pipelines that improved real-time data delivery 20 %.</li>
-          <li>Deployed containerized ML services on AWS (EC2 / S3 / Redshift) with Kubernetes, shrinking release cycles 35 %.</li>
-          <li>Implemented SAP Service Ticket ML + NLP routing, reducing issue resolution time by 3 hrs.</li>
-          <li>Led a six-member team operating ETL workflows in SAP Data Intelligence; reported KPIs to board directors.</li>
-          <li>Modeled authorization workflows in SAS/STAT, boosting processing speed 40 %.</li>
-          <li>Visualized insights in Power BI &amp; Excel, delivering SoD risk dashboards and 10 CAB presentations.</li>
-        </ul>
-      </details>
-    </li>
-
-    <!-- EY – Associate Consultant -->
-    <li>
-      <span class="timeline-dot"></span>
-      <details class="timeline-card shadow-sm">
-        <summary class="d-flex justify-content-between align-items-start">
-          <div>
-            <small class="text-muted">Jul 2021 – Jan 2022</small>
-            <h5 class="mb-1">Associate Consultant, Data Science &amp; Analytics</h5>
-            <strong>Ernst &amp; Young (EY)</strong>
+          <div class="stat-item">
+            <span class="stat-number">6</span>
+            <span class="stat-label">ML Projects</span>
           </div>
-          <img class="timeline-logo" src="ey.jpg" alt="EY">
-        </summary>
-        <ul class="mb-0 pl-4 pt-2">
-          <li>Delivered Power BI KPI dashboards for 6 clients, enabling data-driven decision-making.</li>
-          <li>Implemented Git + Jenkins CI/CD for ML models, reducing response times 30 %.</li>
-          <li>Ran application workshops, UAT, and user-training sessions with CFOs &amp; stakeholders.</li>
-          <li>Designed GRC rulesets and continuous-risk-monitoring frameworks for multiple industries.</li>
-          <li>Led SAP ERP → S/4 HANA migration and GCP data migration for 3 000 + users.</li>
-          <li>Built risk &amp; controls matrices and managed SAP role design during a large automotive merger.</li>
-        </ul>
-      </details>
-    </li>
-
-    <!-- EY – Senior Analyst -->
-    <li>
-      <span class="timeline-dot"></span>
-      <details class="timeline-card shadow-sm">
-        <summary class="d-flex justify-content-between align-items-start">
-          <div>
-            <small class="text-muted">Jun 2019 – Jul 2021</small>
-            <h5 class="mb-1">Senior Analyst, Data Science &amp; Analytics</h5>
-            <strong>Ernst &amp; Young (EY)</strong>
-          </div>
-          <img class="timeline-logo" src="ey.jpg" alt="EY">
-        </summary>
-        <ul class="mb-0 pl-4 pt-2">
-          <li>Automated Python &amp; VBScript workflows, halving data-processing time.</li>
-          <li>Managed SAP user provisioning across multi-client landscapes.</li>
-          <li>Co-developed SQL tooling that redesigned 10 K + SAP roles, eliminating 30 % critical and 50 % high risks.</li>
-          <li>Executed SAP GRC modules (ARA, EAM, BRM, UAR, ARM) end-to-end for multiple clients.</li>
-        </ul>
-      </details>
-    </li>
-
-  </ul>
-</div>
-<!-- /Experience -->
-
-<!-- ───────────── Projects ───────────── -->
-<section id="projects" class="projects-section section-padding py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">Projects</h2>
-
-    <div class="row portfolio-row justify-content-center">
-
-      <!-- Project 1 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/nishad2725/RAGent-AI.git">
-            <h5>RAGent AI – Retrieval Augmented Multi-Agent Assistant</h5>
-          </a>
-          <p class="project-des">
-            RAGent AI is a powerful, visually interactive chatbot powered by
-            LangChain, designed for RAG and multi-agent workflows.<br><br>
-            With support for OpenAI, HuggingFace, and Ollama LLMs, it’s your
-            go-to assistant for document Q&amp;A, semantic search, and
-            summarization — all with a beautiful Streamlit interface.
-          </p>
-          <a target="_blank" href="https://github.com/nishad2725/RAGent-AI.git">
-            <img class="project-image" src="Ragent.jpg" alt="RAGent AI">
-          </a>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
-            <h5>Log Classification using DeepSeek-R1, BERT, Regex</h5>
+        <div class="about-links">
+          <a href="https://github.com/nishad2725" target="_blank" rel="noopener"
+             class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
           </a>
-          <p class="project-des">
-            Designed a multi-stage log classifier that routes messages through
-            Regex, Sentence Transformer + LogReg, and LLMs depending on
-            complexity and data availability.<br><br>
-            Built with Python, HuggingFace Transformers, and OpenAI API to
-            robustly handle structured &amp; unstructured logs.
-          </p>
-          <a target="_blank"
-             href="https://github.com/nishad2725/Log-Classification-using-Deepseek-R1-BERT-REGEX.git">
-            <img class="project-image" src="log.jpeg" alt="Log Classifier">
+          <a href="https://www.linkedin.com/in/nishad-kane/" target="_blank" rel="noopener"
+             class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
           </a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
-            <h5>Real-Time Stock Market Analysis</h5>
-          </a>
-          <p class="project-des">
-            Built a Kafka-based real-time pipeline, deployed producers/
-            consumers on AWS EC2, persisted data to S3, catalogued with Glue,
-            and queried via Athena.
-          </p>
-          <a target="_blank"
-             href="https://github.com/nishad2725/End-To-End-Stock-Market-Kafka-Real-Time-Data-Engineering-Project.git">
-            <img class="project-image" src="stock.jpg" alt="Stock Analysis">
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
-            <h5>Autonomous Car Parking with Deep RL</h5>
-          </a>
-          <p class="project-des">
-            Developed an autonomous parking system using PPO in Unity ML-Agents.
-            Trained agents park efficiently from dynamic start points.
-          </p>
-          <a target="_blank"
-             href="https://github.com/nishad2725/Autonomous-Parking-Using-Deep-RL.git">
-            <img class="project-image" src="RL.gif" alt="Car Parking RL">
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/charu167/DDS_Porject_Backend.git">
-            <h5>Distributed Payment Processing System</h5>
-          </a>
-          <p class="project-des">
-            Built a financial-transaction engine with CockroachDB + Flask,
-            exposing REST / Next.js front-end, emphasising fault-tolerance,
-            real-time monitoring, and Docker deployment.
-          </p>
-          <a target="_blank"
-             href="https://github.com/charu167/DDS_Porject_Backend.git">
-            <img class="project-image" src="payment.jpg" alt="Distributed Payments">
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="col-12 col-md-5 mb-5">
-        <div class="text-center">
-          <a class="title-linkk" target="_blank"
-             href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
-            <h5>Customer Churn Prediction</h5>
-          </a>
-          <p class="project-des">
-            Trained a PyTorch / Scikit-learn churn classifier with SMOTE,
-            visualised drivers in Matplotlib & Seaborn; achieved 95 % accuracy.
-          </p>
-          <a target="_blank"
-             href="https://github.com/nishad2725/Customer-Churn-Prediction-and-Analysis-.git">
-            <img class="project-image" src="Cust.jpg" alt="Churn Prediction">
+          <a href="mailto:nskane@asu.edu" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>
@@ -379,154 +154,760 @@
 </section>
 
 
-
-<!-- ───────── Certifications ───────── -->
-<section id="certs" class="certifications-section text-center">
-  <!-- centred white heading with aqua underline -->
-  <h1 class="cert-title">Certifications</h1>
-
+<!-- ═══════════════════════════════════════════════════════
+     TECH STACK
+════════════════════════════════════════════════════════ -->
+<section id="tech-stack" class="section-padding">
   <div class="container">
-    <!-- ── row 1 ── -->
-    <div class="row cert-row justify-content-center mb-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">What I Work With</span>
+      <h2 class="section-heading section-heading-center">Tech Stack</h2>
+    </div>
 
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://coursera.org/share/fe285a390437ba1c57e3061289316e90">
-          <img src="ibm.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="IBM Data Science Specialization">
-        </a>
-        <h5 class="mt-2">IBM Data Science Specialization</h5>
-      </div>
-
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://www.credly.com/badges/9ab17f57-7fec-4286-b03e-1aded6aafed8/linked_in?t=s9g9y5">
-          <img src="aws.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="AWS Certified Cloud Practitioner">
-        </a>
-        <h5 class="mt-2">AWS Certified Cloud Practitioner</h5>
-      </div>
-
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://drive.google.com/file/d/1H4hBLE1qgxZ3bRamufzX98MIPmYlBdBk/view?usp=sharing">
-          <img src="gen.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="Google Cloud Generative AI">
-        </a>
-        <h5 class="mt-2">Google Cloud – Generative AI</h5>
-      </div>
-
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://coursera.org/share/49e97947f2078507fab426aaa9ae09c7">
-          <img src="ibm_ml.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="IBM Machine Learning">
-        </a>
-        <h5 class="mt-2">IBM Machine Learning</h5>
+    <!-- AI / ML -->
+    <div class="tech-category" data-aos="fade-up" data-aos-delay="50">
+      <h4 class="tech-cat-label">AI / ML</h4>
+      <div class="tech-grid">
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch">
+          <span>PyTorch</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow">
+          <span>TensorFlow</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="scikit-learn">
+          <span>scikit-learn</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="HuggingFace">
+          <span>HuggingFace</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="LangChain">
+          <span>LangChain</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="OpenAI">
+          <span>OpenAI API</span>
+        </div>
       </div>
     </div>
 
-    <!-- ── row 2 ── -->
-    <div class="row cert-row justify-content-center">
-
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://www.hackerrank.com/nishadkane">
-          <img src="sql.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="HackerRank SQL Gold">
-        </a>
-        <h5 class="mt-2">HackerRank SQL Gold Badge</h5>
+    <!-- Data Engineering -->
+    <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+      <h4 class="tech-cat-label">Data Engineering</h4>
+      <div class="tech-grid">
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" alt="Kafka">
+          <span>Apache Kafka</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Spark">
+          <span>Apache Spark</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL">
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/cockroachdb/6933FF" alt="CockroachDB">
+          <span>CockroachDB</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas">
+          <span>Pandas</span>
+        </div>
       </div>
+    </div>
 
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://coursera.org/share/434d687a5534910c2a1a194c0a8ced7b">
-          <img src="python.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="Python for Data Science & AI">
-        </a>
-        <h5 class="mt-2">Python for DS & AI</h5>
+    <!-- Cloud & DevOps -->
+    <div class="tech-category" data-aos="fade-up" data-aos-delay="150">
+      <h4 class="tech-cat-label">Cloud &amp; DevOps</h4>
+      <div class="tech-grid">
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS">
+          <span>AWS</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP">
+          <span>Google Cloud</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker">
+          <span>Docker</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes">
+          <span>Kubernetes</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask">
+          <span>Flask</span>
+        </div>
       </div>
+    </div>
 
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank"
-           href="https://coursera.org/share/aa3fd8a1e5e2e8e329b9a4b0f09a98da">
-          <img src="dv.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="Data Visualization">
-        </a>
-        <h5 class="mt-2">Data Visualization</h5>
+    <!-- Languages -->
+    <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+      <h4 class="tech-cat-label">Languages</h4>
+      <div class="tech-grid">
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
+          <span>Python</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL">
+          <span>SQL</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-badge">
+          <img src="https://cdn.simpleicons.org/r/276DC3" alt="R">
+          <span>R</span>
+        </div>
       </div>
+    </div>
 
-      <div class="col-12 col-md-3 mb-4">
-        <a target="_blank" href="https://leetcode.com/u/NishadK27">
-          <img src="sql_ltcd.jpg"
-               class="cert-img rounded shadow-sm"
-               alt="LeetCode SQL 50">
-        </a>
-        <h5 class="mt-2">LeetCode SQL 50</h5>
-      </div>
-    
-    </div><!-- /row 2 -->
-  </div><!-- /container -->
+  </div>
 </section>
 
 
-<!-- ───────────── Awards & Achievements ───────────── -->
-<section id="awards" class="awards-section section-padding">
+<!-- ═══════════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════════ -->
+<section id="experience" class="section-padding">
   <div class="container">
-    <h2 class="section-title text-center mb-5">Awards &amp; Achievements</h2>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Where I've Worked</span>
+      <h2 class="section-heading section-heading-center">Experience</h2>
+    </div>
 
-    <div class="row text-center justify-content-center">
+    <div class="timeline-wrapper">
 
-      <!-- Award 1 -->
-      <div class="col-12 col-md-3 mb-5">
-        <h5 class="font-weight-bold">I AM EXCEPTIONAL</h5>
-        <p>Awarded EY’s “I Am Exceptional” accolade for spearheading high-impact, intellect-driven engagements across a diverse client base.</p>
-        <img src="award_exceptional.jpg" alt="EY I Am Exceptional Award" class="award-img">
+      <!-- GSA — ASU -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <details>
+            <summary>
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-date">Aug 2024 – May 2025</span>
+                  <h4 class="timeline-title">Graduate Service Assistant</h4>
+                  <p class="timeline-org">Arizona State University</p>
+                </div>
+                <img src="assets/images/logos/logo_asu.png" alt="ASU"
+                     class="timeline-logo" loading="lazy">
+              </div>
+              <p class="timeline-expand-hint"><i class="fas fa-chevron-down me-1"></i>Expand details</p>
+            </summary>
+            <ul class="timeline-bullets">
+              <li>Developed Python-based automated grading systems reducing evaluation time by 40%.</li>
+              <li>Created and maintained comprehensive lab assignments and course materials for 60+ students.</li>
+              <li>Provided one-on-one mentorship on distributed systems, cloud computing, and ML concepts.</li>
+              <li>Collaborated with faculty to integrate real-world AI case studies into curriculum.</li>
+            </ul>
+          </details>
+        </div>
       </div>
 
-      <!-- Award 2 -->
-      <div class="col-12 col-md-3 mb-5">
-        <h5 class="font-weight-bold">CODE-SHASTRA 9.0<br>Runner-Up</h5>
-        <p>Runner-up among 200 + teams at DJSCE CSI’s 24-hour “CODE-SHASTRA 9.0” hackathon.</p>
-        <img src="award_codeshastra.jpg" alt="CODE-SHASTRA Hackathon Trophy" class="award-img">
+      <!-- Consultant — EY -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <details>
+            <summary>
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-date">Jan 2022 – Aug 2023</span>
+                  <h4 class="timeline-title">Consultant, Data Science &amp; Analytics</h4>
+                  <p class="timeline-org">Ernst &amp; Young (EY)</p>
+                </div>
+                <img src="assets/images/logos/ey.jpg" alt="EY"
+                     class="timeline-logo" loading="lazy">
+              </div>
+              <p class="timeline-expand-hint"><i class="fas fa-chevron-down me-1"></i>Expand details</p>
+            </summary>
+            <ul class="timeline-bullets">
+              <li>Designed and deployed ML-based financial risk models, improving audit accuracy by 30% across 10+ global clients.</li>
+              <li>Built end-to-end NLP pipelines for contract analysis, reducing manual review time by 60%.</li>
+              <li>Led a team of 4 analysts on a predictive maintenance solution for a Fortune 500 manufacturing client.</li>
+              <li>Architected a real-time anomaly detection system on AWS Kinesis processing 50K+ transactions/day.</li>
+              <li>Presented insights to C-suite stakeholders, translating complex ML outputs into actionable business strategy.</li>
+            </ul>
+          </details>
+        </div>
       </div>
 
-      <!-- Award 3 -->
-      <div class="col-12 col-md-3 mb-5">
-        <h5 class="font-weight-bold">Ideal Student of the School</h5>
-        <p>Honoured as the “Ideal Student” (2 000 + peers) for academic excellence and year-round leadership.</p>
-        <img src="award_idealstudent.jpg" alt="Ideal Student Award" class="award-img">
+      <!-- Associate Consultant — EY -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <details>
+            <summary>
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-date">Jul 2021 – Jan 2022</span>
+                  <h4 class="timeline-title">Associate Consultant</h4>
+                  <p class="timeline-org">Ernst &amp; Young (EY)</p>
+                </div>
+                <img src="assets/images/logos/ey.jpg" alt="EY"
+                     class="timeline-logo" loading="lazy">
+              </div>
+              <p class="timeline-expand-hint"><i class="fas fa-chevron-down me-1"></i>Expand details</p>
+            </summary>
+            <ul class="timeline-bullets">
+              <li>Developed data pipelines using Python and SQL for financial audit automation, processing 1M+ records.</li>
+              <li>Built interactive Power BI dashboards enabling real-time risk monitoring for audit teams.</li>
+              <li>Collaborated with cross-functional teams to deliver analytics solutions for 5 mid-market clients.</li>
+              <li>Automated reporting workflows using Python scripts, saving 15+ hours/week of manual work.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <!-- Senior Analyst — EY -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <details>
+            <summary>
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-date">Jun 2019 – Jul 2021</span>
+                  <h4 class="timeline-title">Senior Analyst</h4>
+                  <p class="timeline-org">Ernst &amp; Young (EY)</p>
+                </div>
+                <img src="assets/images/logos/ey.jpg" alt="EY"
+                     class="timeline-logo" loading="lazy">
+              </div>
+              <p class="timeline-expand-hint"><i class="fas fa-chevron-down me-1"></i>Expand details</p>
+            </summary>
+            <ul class="timeline-bullets">
+              <li>Conducted statistical analysis on large financial datasets to support external audit engagements.</li>
+              <li>Developed Python and R scripts for data extraction, transformation, and validation.</li>
+              <li>Designed sampling methodologies for audit testing, improving coverage by 25%.</li>
+              <li>Mentored junior analysts on data analytics tools and best practices.</li>
+            </ul>
+          </details>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="footer">
-  <footer class="text-center">
-    <div class="container text-center">
-      <p class="mb-0 text-secondary">
-        Thanks for reading, and feel free to reach out to me.
+
+<!-- ═══════════════════════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════════════════════ -->
+<section id="education" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-heading section-heading-center">Education</h2>
+    </div>
+
+    <div class="timeline-wrapper">
+
+      <!-- ASU M.S. -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-date">2023 – 2025</span>
+              <h4 class="timeline-title">M.S. Computer Science</h4>
+              <p class="timeline-org">Arizona State University &mdash; GPA: 3.80</p>
+            </div>
+            <img src="assets/images/logos/logo_asu.png" alt="ASU"
+                 class="timeline-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- DJSCE B.E. -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-date">2015 – 2019</span>
+              <h4 class="timeline-title">B.E. Information Technology</h4>
+              <p class="timeline-org">Dwarkadas J. Sanghavi College of Engineering &mdash; GPA: 3.52</p>
+            </div>
+            <img src="assets/images/logos/logo_djsce.png" alt="DJSCE"
+                 class="timeline-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- HSC -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-date">2013 – 2015</span>
+              <h4 class="timeline-title">Higher Secondary Certificate (HSC)</h4>
+              <p class="timeline-org">University of Kolhapur</p>
+            </div>
+            <img src="assets/images/logos/logo_kolhapur.jpeg" alt="Kolhapur University"
+                 class="timeline-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- SSC -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-date">2007 – 2013</span>
+              <h4 class="timeline-title">Secondary School Certificate (SSC)</h4>
+              <p class="timeline-org">Tilak High School</p>
+            </div>
+            <img src="assets/images/logos/logo_tilak.jpg" alt="Tilak High School"
+                 class="timeline-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════════ -->
+<section id="projects" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-heading section-heading-center">Projects</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- RAGent AI -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/Ragent.jpg" alt="RAGent AI"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/RAGent-AI.git" target="_blank"
+                 rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">LangChain</span>
+              <span class="tag">RAG</span>
+              <span class="tag">LLM</span>
+            </div>
+            <h4 class="project-title">RAGent AI</h4>
+            <p class="project-desc">
+              LangChain-powered multi-agent chatbot supporting RAG workflows, semantic search,
+              and document Q&amp;A with OpenAI, HuggingFace, and Ollama LLMs.
+            </p>
+            <a href="https://github.com/nishad2725/RAGent-AI.git" target="_blank"
+               rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Log Classification -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/log.jpeg" alt="Log Classification"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/log-classification" target="_blank"
+                 rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">DeepSeek-R1</span>
+              <span class="tag">BERT</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h4 class="project-title">Log Classification System</h4>
+            <p class="project-desc">
+              Hybrid log classification pipeline combining DeepSeek-R1 reasoning, BERT fine-tuning,
+              and regex patterns for enterprise-scale infrastructure log analysis.
+            </p>
+            <a href="https://github.com/nishad2725/log-classification" target="_blank"
+               rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Stock Market -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/stock.jpg" alt="Real-Time Stock Market Analysis"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/Real-Time-Stock-Market-Analysis-using-Kafka"
+                 target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Kafka</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Real-Time</span>
+            </div>
+            <h4 class="project-title">Real-Time Stock Market Analysis</h4>
+            <p class="project-desc">
+              End-to-end streaming pipeline using Apache Kafka, AWS S3, Glue, and Athena for
+              real-time ingestion and querying of stock market data.
+            </p>
+            <a href="https://github.com/nishad2725/Real-Time-Stock-Market-Analysis-using-Kafka"
+               target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Autonomous Car Parking -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/RL.gif" alt="Autonomous Car Parking RL"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/Autonomous-Parking-Deep-RL"
+                 target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Deep RL</span>
+              <span class="tag">PPO</span>
+              <span class="tag">Unity</span>
+            </div>
+            <h4 class="project-title">Autonomous Car Parking</h4>
+            <p class="project-desc">
+              Deep Reinforcement Learning agent trained with PPO in Unity ML-Agents to
+              autonomously navigate and park a vehicle in complex environments.
+            </p>
+            <a href="https://github.com/nishad2725/Autonomous-Parking-Deep-RL"
+               target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distributed Payment Processing -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/payment.jpg" alt="Distributed Payment Processing"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/Distributed-Payment-Processing-System"
+                 target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">CockroachDB</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Docker</span>
+            </div>
+            <h4 class="project-title">Distributed Payment Processing</h4>
+            <p class="project-desc">
+              Fault-tolerant payment system leveraging CockroachDB's distributed SQL for
+              ACID transactions, containerized with Docker and orchestrated via Flask APIs.
+            </p>
+            <a href="https://github.com/nishad2725/Distributed-Payment-Processing-System"
+               target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Churn Prediction -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/Cust.jpg" alt="Customer Churn Prediction"
+                 class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/nishad2725/Customer-Churn-Prediction"
+                 target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">SMOTE</span>
+              <span class="tag">scikit-learn</span>
+            </div>
+            <h4 class="project-title">Customer Churn Prediction</h4>
+            <p class="project-desc">
+              End-to-end churn prediction pipeline using PyTorch neural networks, SMOTE
+              oversampling, and ensemble methods achieving 92% recall on imbalanced telecom data.
+            </p>
+            <a href="https://github.com/nishad2725/Customer-Churn-Prediction"
+               target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github me-1"></i>GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════════════════════ -->
+<section id="certs" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Continuous Learning</span>
+      <h2 class="section-heading section-heading-center">Certifications</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="50">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/ibm.jpg" alt="IBM Data Science Specialization" loading="lazy">
+          <p>IBM Data Science Specialization</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/aws.jpg" alt="AWS Certified Cloud Practitioner" loading="lazy">
+          <p>AWS Certified Cloud Practitioner</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="150">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/gen.jpg" alt="Google Cloud Generative AI" loading="lazy">
+          <p>Google Cloud Generative AI</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/ibm_ml.jpg" alt="IBM Machine Learning" loading="lazy">
+          <p>IBM Machine Learning</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="50">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/sql.jpg" alt="HackerRank SQL Gold Badge" loading="lazy">
+          <p>HackerRank SQL Gold Badge</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/python.jpg" alt="Python for Data Science and AI" loading="lazy">
+          <p>Python for Data Science &amp; AI</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="150">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/dv.jpg" alt="Data Visualization" loading="lazy">
+          <p>Data Visualization</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="glass-card cert-card">
+          <img src="assets/images/certs/sql_ltcd.jpg" alt="LeetCode SQL 50" loading="lazy">
+          <p>LeetCode SQL 50</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     AWARDS
+════════════════════════════════════════════════════════ -->
+<section id="awards" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Recognition</span>
+      <h2 class="section-heading section-heading-center">Awards &amp; Achievements</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="glass-card award-card">
+          <div class="award-icon"><i class="fas fa-trophy"></i></div>
+          <img src="assets/images/awards/award_exceptional.jpg"
+               alt="EY I Am Exceptional Award" loading="lazy">
+          <h4>I AM EXCEPTIONAL</h4>
+          <p>Awarded EY's "I Am Exceptional" accolade for spearheading high-impact,
+          intellect-driven engagements across a diverse global client base.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card award-card">
+          <div class="award-icon"><i class="fas fa-medal"></i></div>
+          <img src="assets/images/awards/award_codeshastra.jpg"
+               alt="CODE-SHASTRA 9.0 Runner-Up" loading="lazy">
+          <h4>CODE-SHASTRA 9.0 Runner-Up</h4>
+          <p>Runner-up at Code-Shastra 9.0 &mdash; a national-level competitive programming
+          hackathon organized by JPMorgan Chase.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="glass-card award-card">
+          <div class="award-icon"><i class="fas fa-star"></i></div>
+          <img src="assets/images/awards/award_idealstudent.jpg"
+               alt="Ideal Student of the School" loading="lazy">
+          <h4>Ideal Student of the School</h4>
+          <p>Honored as the Ideal Student by Tilak High School for academic excellence,
+          leadership, and outstanding contribution to school activities.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="section-padding">
+  <div class="container text-center">
+    <div data-aos="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-heading section-heading-center">Let's Build Something</h2>
+      <p class="contact-text">
+        Open to full-time AI Engineer / Data Science roles and interesting collaborations.
+        I'd love to hear from you.
       </p>
+      <div class="contact-links">
+        <a href="mailto:nskane@asu.edu" class="btn btn-primary btn-lg">
+          <i class="fas fa-envelope me-2"></i>Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/nishad-kane/" target="_blank" rel="noopener"
+           class="btn btn-outline-primary btn-lg">
+          <i class="fab fa-linkedin me-2"></i>LinkedIn
+        </a>
+        <a href="https://github.com/nishad2725" target="_blank" rel="noopener"
+           class="btn btn-outline-light btn-lg">
+          <i class="fab fa-github me-2"></i>GitHub
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
 </section>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-          crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-          crossorigin="anonymous"></script>
-    </body>
 
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container text-center">
+    <p>Built with HTML &middot; CSS &middot; JS &nbsp;&middot;&nbsp; Hosted on
+      <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+    </p>
+    <p class="mb-0">&copy; 2025 Nishad Kane</p>
+  </div>
+</footer>
+
+
+<!-- ── CDN Scripts ──────────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- Particles.js config (must be inline — see CLAUDE.md) -->
+<script>
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 55, density: { enable: true, value_area: 800 } },
+      color: { value: ['#6C63FF', '#00D4FF', '#FF6B6B'] },
+      shape: { type: 'circle' },
+      opacity: {
+        value: 0.45, random: true,
+        anim: { enable: true, speed: 0.8, opacity_min: 0.1, sync: false }
+      },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true, distance: 150,
+        color: '#6C63FF', opacity: 0.18, width: 1
+      },
+      move: {
+        enable: true, speed: 1.4,
+        direction: 'none', random: true,
+        straight: false, out_mode: 'out'
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'grab' },
+        onclick:  { enable: true, mode: 'push' },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 140, line_linked: { opacity: 0.5 } },
+        push: { particles_nb: 3 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+<!-- Site JS -->
+<script src="assets/js/main.js"></script>
+
+<!-- GoatCounter Analytics — no cookies, GDPR-friendly -->
+<script data-goatcounter="https://nishad2725.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
 </html>

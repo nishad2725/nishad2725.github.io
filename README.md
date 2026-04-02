@@ -1,125 +1,88 @@
-# 💼 Nishad Kane — Portfolio Website
+# Nishad Kane — AI Engineer Portfolio
 
-A clean, responsive single‑page website to showcase my background in **Data Science, AI/ML, and Cloud Engineering**. Built with vanilla **HTML/CSS**, **Bootstrap 4**, and a sprinkle of **jQuery/Animate.css** for smooth, lightweight animations.
+A modern, interactive single-page portfolio for an AI Engineer & Data Scientist.
+Dark glassmorphism design with animated particles, scroll animations, and a tech-stack showcase.
 
-> **Live Demo:** [https://nishad2725.github.io](https://nishad2725.github.io)
-
----
-
-## ✨ Features
-
-| Section                    | Highlights                                            |
-| -------------------------- | ----------------------------------------------------- |
-| **Navbar**                 | Sticky, animated scroll‑spy links + social icons      |
-| **About**                  | Hero intro with profile photo & animated text         |
-| **Education & Experience** | Two‑column vertical timeline with logos & hover cards |
-| **Projects**               | Responsive project grid with images & GitHub links    |
-| **Certifications**         | Dark‑mode gallery of badges & credentials             |
-| **Awards & Achievements**  | Card gallery of trophies & accolades                  |
-| **Footer**                 | Minimal CTA + social links                            |
-
-Additional goodies:
-
-* Fully responsive (mobile → 4K).
-* Blurred/parallax background images per section.
-* Lightweight skills‑diagram widget (no external chart libs).
-* Smooth scroll & subtle hover effects (Animate.css).
+**Live:** [https://nishad2725.github.io](https://nishad2725.github.io)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-| Layer             | Tools                                           |
-| ----------------- | ----------------------------------------------- |
-| **Structure**     | HTML5, Bootstrap 4.5                            |
-| **Styling**       | Custom CSS, Google Fonts (Poppins), Animate.css |
-| **Scripting**     | jQuery 3.5, `skills-diagram.coderbits.js`       |
-| **Icons & Media** | Font Awesome 4.7, Unsplash, custom SVG/PNG      |
-| **Hosting**       | GitHub Pages                                    |
+| Layer | Library / Tool |
+|-------|---------------|
+| Layout | Bootstrap 5.3 (CDN) |
+| Icons | Font Awesome 6.5 (CDN) + Simple Icons CDN |
+| Fonts | Space Grotesk + Inter (Google Fonts) |
+| Animations | AOS 2.3.4 (scroll) · Typed.js 2.0.12 (typewriter) |
+| Hero FX | Particles.js 2.0.0 |
+| Analytics | GoatCounter (privacy-first, no cookies) |
+| Hosting | GitHub Pages |
+
+No npm. No build step. Pure HTML / CSS / JS.
 
 ---
 
-## 🚀 Quick Start
+## Sections
+
+1. **Hero** — Animated particle background, gradient name, typewriter role cycling
+2. **About** — Bio, stats (4+ yrs EY, GPA 3.80, 6 projects), social links
+3. **Tech Stack** — Icon-badge grid: AI/ML · Data Engineering · Cloud & DevOps · Languages
+4. **Experience** — Collapsible timeline (EY Consultant → Associate → Analyst, ASU GSA)
+5. **Education** — Timeline (ASU M.S. CS, DJSCE B.E., HSC, SSC)
+6. **Projects** — 6 glassmorphism cards with hover overlays and GitHub links
+7. **Certifications** — 8 certification badges
+8. **Awards** — 3 achievement cards
+9. **Contact** — Email, LinkedIn, GitHub CTAs
+
+---
+
+## File Structure
+
+```
+nishad2725.github.io/
+├── index.html
+├── CLAUDE.md              (coding standards)
+├── README.md
+└── assets/
+    ├── css/style.css
+    ├── js/main.js
+    └── images/
+        ├── profile/
+        ├── projects/
+        ├── certs/
+        ├── awards/
+        ├── logos/
+        └── backgrounds/
+```
+
+---
+
+## Local Preview
 
 ```bash
-# 1. Clone the repo
-$ git clone https://github.com/nishad2725/nishad2725.github.io.git
-$ cd nishad2725.github.io
+# Option 1 — Python
+python3 -m http.server 8000
 
-# 2. Install live‑reload server (optional)
-$ npm install -g live-server
-
-# 3. Launch in the browser
-$ live-server .
+# Option 2 — VS Code Live Server extension
+# Right-click index.html → Open with Live Server
 ```
 
-### Deploying to GitHub Pages
-
-1. Push the code to the `main` branch of a `<username>.github.io` repo.
-2. Pages will auto‑deploy. 🎉
-
-For a project site (e.g. `/portfolio`), enable **Pages → Deploy from `/docs`** or `/dist`.
+Then open `http://localhost:8000`.
 
 ---
 
-## 📁 Project Structure
+## Analytics Setup (one-time)
 
-```
-├─ index.html            # Main single‑page app
-├─ style.css             # Global styles & overrides
-├─ skills-diagram.css    # Circular skills diagram styles
-├─ skills-diagram.coderbits.js
-├─ assets/               # Images, logos, gifs
-│  ├─ preview.png        # Banner screenshot for README
-│  └─ ...
-└─ docs/                 # (Optional) Build/output folder for GH Pages
-```
+Visitor tracking uses [GoatCounter](https://www.goatcounter.com) — free, no cookies, GDPR-compliant.
+
+1. Create a free account at goatcounter.com with code `nishad2725`
+2. The script tag in `index.html` will start sending pageviews automatically
+3. Dashboard: `https://nishad2725.goatcounter.com`
 
 ---
 
-## 🧩 Customisation
+## Author
 
-| Want to…                 | Edit                                               |
-| ------------------------ | -------------------------------------------------- |
-| Change navigation links  | `index.html` → `<nav>` list                        |
-| Update colours / fonts   | `style.css` global variables                       |
-| Swap section backgrounds | `.about-section`, `.timeline`, etc. in `style.css` |
-| Add / remove projects    | `#publications` cards in `index.html`              |
-| Replace images           | Drop new files in `assets/` + update `src`         |
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome! If you spot a bug or have an idea for a new feature:
-
-1. **Fork** the repository
-2. **Create** your feature branch `git checkout -b feature/featureName`
-3. **Commit** your changes `git commit -m 'Add awesome feature'`
-4. **Push** to the branch `git push origin feature/featureName`
-5. **Open** a Pull Request
-
----
-
-## 📝 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
-
-## 👤 Author
-
-**Nishad Kane**
-[Portfolio](https://nishad2725.github.io) · [LinkedIn](https://linkedin.com/in/nskane) · [GitHub](https://github.com/nishad2725) · [Email](mailto:nskane@asu.edu)
-
----
-
-## 📅 Roadmap / Future Work
-
-* [ ] Add dark‑mode toggle
-* [ ] Migrate to Bootstrap 5 + Sass
-* [ ] Integrate Netlify CMS for easy content edits
-* [ ] Unit + visual regression tests via Playwright
-* [ ] Lighthouse CI automated audits
-
-> *“Innovative, collaborative, and relentlessly data‑driven — always ready for the next challenge.”*
+**Nishad Kane** — AI Engineer & Data Scientist  
+[GitHub](https://github.com/nishad2725) · [LinkedIn](https://www.linkedin.com/in/nishad-kane/) · [nskane@asu.edu](mailto:nskane@asu.edu)
