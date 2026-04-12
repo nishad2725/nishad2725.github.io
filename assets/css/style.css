@@ -9,8 +9,8 @@
   --color-primary:    #a78bfa;
   --color-secondary:  #60a5fa;
   --color-accent:     #f472b6;
-  --color-bg:         #0d1117;
-  --color-bg-alt:     #161b22;
+  --color-bg:         #070d1a;
+  --color-bg-alt:     #0a1020;
   --color-surface:    rgba(255, 255, 255, 0.05);
   --color-border:     rgba(255, 255, 255, 0.08);
   --color-text:       #e6edf3;
@@ -81,6 +81,22 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Section Commons ───────────────────────────────────────── */
+/* All sections sit above the fixed constellation canvas */
+section, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Alternate sections get a very subtle dark tint so content is readable
+   while the constellation still shows through */
+#about, #experience, #projects, #awards {
+  background: rgba(7, 13, 26, 0.55);
+}
+
+#tech-stack, #education, #certs, #contact {
+  background: rgba(10, 16, 32, 0.65);
+}
+
 .section-padding { padding: var(--spacing-section) 0; }
 
 .section-tag {
@@ -198,6 +214,19 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
+/* ── Full-page constellation canvas ───────────────────────── */
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-bg);
+}
+
+/* The canvas inside particles-js should not block page clicks */
+#particles-js canvas {
+  pointer-events: none;
+}
+
 /* ── Hero ──────────────────────────────────────────────────── */
 #hero {
   position: relative;
@@ -205,14 +234,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-hero);
-  overflow: hidden;
-}
-
-#particles-js {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  background: transparent;
 }
 
 .hero-content {
@@ -312,7 +334,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── About ─────────────────────────────────────────────────── */
-#about { background-color: var(--color-bg-alt); }
 
 .about-photo-frame {
   width: 260px;
@@ -397,7 +418,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Tech Stack — Skill Bars ───────────────────────────────── */
-#tech-stack { background-color: var(--color-bg); }
 
 .skill-quadrant {
   padding: 28px;
@@ -455,8 +475,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Timeline (Alternating) ────────────────────────────────── */
-#experience { background-color: var(--color-bg-alt); }
-#education  { background-color: var(--color-bg); }
 
 .alt-timeline {
   position: relative;
@@ -614,7 +632,6 @@ details > summary::-webkit-details-marker { display: none; }
 }
 
 /* ── Projects ──────────────────────────────────────────────── */
-#projects { background-color: var(--color-bg-alt); }
 
 .projects-category-label {
   font-size: 1rem;
@@ -712,7 +729,6 @@ details > summary::-webkit-details-marker { display: none; }
 }
 
 /* ── Certifications ────────────────────────────────────────── */
-#certs { background-color: var(--color-bg); }
 
 .cert-card {
   padding: 20px;
@@ -739,7 +755,6 @@ details > summary::-webkit-details-marker { display: none; }
 }
 
 /* ── Awards ────────────────────────────────────────────────── */
-#awards { background-color: var(--color-bg-alt); }
 
 .award-card {
   padding: 28px;
@@ -784,7 +799,6 @@ details > summary::-webkit-details-marker { display: none; }
 }
 
 /* ── Contact ───────────────────────────────────────────────── */
-#contact { background-color: var(--color-bg); }
 
 .contact-input {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -861,7 +875,7 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* ── Footer ────────────────────────────────────────────────── */
 .site-footer {
-  background-color: var(--color-bg-alt);
+  background: rgba(10, 16, 32, 0.75);
   border-top: 1px solid var(--glass-border);
   padding: 32px 0;
 }

@@ -36,6 +36,9 @@
 
 <body>
 
+<!-- Full-page constellation background (fixed, behind everything) -->
+<div id="particles-js"></div>
+
   <!-- ═══════════════════════════════════════════════════════
      NAVBAR
 ════════════════════════════════════════════════════════ -->
@@ -70,7 +73,6 @@
      HERO
 ════════════════════════════════════════════════════════ -->
   <section id="hero">
-    <div id="particles-js"></div>
 
     <div class="hero-content">
       <h1 class="hero-name">Nishad Kane</h1>
@@ -1082,37 +1084,37 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- Particles.js config — constellation on dark background -->
+  <!-- Particles.js config — full-page constellation network -->
   <script>
     particlesJS('particles-js', {
       particles: {
-        number: { value: 80, density: { enable: true, value_area: 900 } },
-        color: { value: '#a78bfa' },
+        number: { value: 120, density: { enable: true, value_area: 800 } },
+        color: { value: '#4a7ecf' },
         shape: { type: 'circle' },
         opacity: {
-          value: 0.4, random: true,
-          anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false }
+          value: 0.5, random: true,
+          anim: { enable: true, speed: 0.4, opacity_min: 0.1, sync: false }
         },
-        size: { value: 2, random: true },
+        size: { value: 2.5, random: true },
         line_linked: {
-          enable: true, distance: 150,
-          color: '#a78bfa', opacity: 0.15, width: 1
+          enable: true, distance: 160,
+          color: '#4a7ecf', opacity: 0.18, width: 1
         },
         move: {
-          enable: true, speed: 0.8,
+          enable: true, speed: 0.6,
           direction: 'none', random: true,
-          straight: false, out_mode: 'out'
+          straight: false, out_mode: 'out', bounce: false
         }
       },
       interactivity: {
-        detect_on: 'canvas',
+        detect_on: 'window',
         events: {
           onhover: { enable: true, mode: 'grab' },
-          onclick: { enable: true, mode: 'push' },
+          onclick:  { enable: true, mode: 'push' },
           resize: true
         },
         modes: {
-          grab: { distance: 140, line_linked: { opacity: 0.4 } },
+          grab: { distance: 160, line_linked: { opacity: 0.5 } },
           push: { particles_nb: 3 }
         }
       },
