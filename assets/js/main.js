@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navbar && hero) {
     const navbarObserver = new IntersectionObserver(
       ([entry]) => {
-        // When hero stops intersecting, user has scrolled past it
         navbar.classList.toggle('scrolled', !entry.isIntersecting);
       },
       { threshold: 0.05 }
@@ -81,6 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  }
+
+
+  // ── 6. Skill bar animation when tech-stack enters viewport ──
+  const techSection = document.getElementById('tech-stack');
+  if (techSection) {
+    const barObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+            bar.style.width = (bar.dataset.width || 0) + '%';
+          });
+          barObserver.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    barObserver.observe(techSection);
   }
 
 });
